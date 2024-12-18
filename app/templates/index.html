@@ -7,7 +7,7 @@
     <title>BILLZIFY</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta name="description" content="Optimize Your Hotel's Performance with Our Intuitive, Customized Management Solutions, Enhancing Efficiency and Elevating Guest Experiences.">
+    <meta name="description" content="Billzify is India's most trusted hotel management system and channel manager. With Billzify, streamline OTA bookings, manage inventory, and enhance hotel operations effortlessly. Choose Billzify for a complete all-in-one solution for Indian hotels.">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -543,7 +543,7 @@ With our easy-to-use and customizable website builder - hotel owners can create 
             <div class="row g-5">
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <p class="mb-4">Get in touch with our team to clarify your queries</a>.</p>
-                    <form action="{% url 'addfreedemo' %}" method="post">
+                    <form action="{% url 'proxy_create_demo' %}" method="post">
                         {% csrf_token %}
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -560,14 +560,14 @@ With our easy-to-use and customizable website builder - hotel owners can create 
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="tel" required pattern="[6-9][0-9]{9}" class="form-control" name="phone" id="subject" placeholder="Phone">
-                                    <label for="subject">Phone</label>
+                                    <input type="tel" required pattern="[6-9][0-9]{9}" class="form-control" name="phone" id="phone" placeholder="Phone">
+                                    <label for="phone">Phone</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" required maxlength="300" class="form-control" name="businessname" id="subject" placeholder="Business Name">
-                                    <label for="subject">Business Name</label>
+                                    <input type="text" required maxlength="300" class="form-control" name="businessname" id="businessname" placeholder="Business Name">
+                                    <label for="businessname">Business Name</label>
                                 </div>
                             </div>
                             <div class="col-12 mt-4 mb-5">
@@ -575,6 +575,9 @@ With our easy-to-use and customizable website builder - hotel owners can create 
                             </div>
                         </div>
                     </form>
+                    
+                    
+                    
                 </div>
 
                 <div class="col-lg-5 col-md-6 wow fadeInUp"  data-wow-delay="0.1s">
@@ -586,11 +589,7 @@ With our easy-to-use and customizable website builder - hotel owners can create 
     </div>
     <!-- Contact End -->
 
-
     
-   
-
-
 
     <!-- Copyright Start -->
     <div class="container-fluid  py-4" style="background: #EFEFF6">
@@ -599,25 +598,25 @@ With our easy-to-use and customizable website builder - hotel owners can create 
                     <div class="col-md-8 text-center text-md-start mb-3 mb-md-0">
                     	 <img class="img-fluid" src="{% static 'img/illfy.png'%}" style="height:35px" alt=""><br><br>
                          &copy; Billzify, All rights reserved.
-                         <span style="font-size:24px;">&middot;</span>
+                         {% comment %} <span style="font-size:24px;">&middot;</span>
                          <a href="{% url 'terms' %}" class="text-black-50">Terms</a>
                          <span style="font-size:24px;">&middot;</span>
                          <a href="{% url 'privcy' %}" class="text-black-50">Privacy</a>
                          <span style="font-size:24px;">&middot;</span>
-                         <a href="{% url 'refund' %}" class="text-black-50">Refund policy</a>
+                         <a href="{% url 'refund' %}" class="text-black-50">Refund policy</a> {% endcomment %}
                     </div>
 
 
                     <div class="col-md-4 text-center text-md-end">
 
-                    
+                        <a class="btn btn-light mb-2" href="https://www.instagram.com/billzifyindia/"><small class="fab fa-instagram text-primary"></small></a>
                     	<a class="btn btn-light mb-2"><small class="fab fa-facebook-f text-primary"></small></a>
                     	<a class="btn btn-light mb-2"><small class="fab fa-twitter text-primary"></small></a>
                     	<a class="btn btn-light mb-2"><small class="fab fa-linkedin-in text-primary"></small></a>
 
                     	<br>
                     	{% comment %} <a href="{% url 'loginpage' %}" class="btn btn-outline-primary ">Billzify</a> {% endcomment %}
-                    	<a href="https://www.dineflow.billzify.com" class="btn btn-outline-primary ">DineFlow</a>
+                    	{% comment %} <a href="https://www.dineflow.billzify.com" class="btn btn-outline-primary ">DineFlow</a> {% endcomment %}
                     	
                     </div>
 

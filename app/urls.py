@@ -9,6 +9,7 @@ urlpatterns = [
     path('terms/', views.index,name="terms"),
     path('privcy/', views.index,name="privcy"),
     path('refund/', views.index,name="refund"),
+    path('proxy-create-demo/', views.forward_to_live_api, name='proxy_create_demo'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
