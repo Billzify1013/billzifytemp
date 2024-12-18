@@ -48,3 +48,7 @@ def forward_to_live_api(request):
         return redirect("index")  # Replace with your success page URL name
 
     return redirect("index") 
+
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
