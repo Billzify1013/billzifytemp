@@ -1,0 +1,18 @@
+from django.urls import path
+from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('', views.index,name="index"),
+    path('addfreedemo/', views.index,name="addfreedemo"),
+    path('terms/', views.index,name="terms"),
+    path('privcy/', views.index,name="privcy"),
+    path('refund/', views.index,name="refund"),
+
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
