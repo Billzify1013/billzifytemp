@@ -52,3 +52,12 @@ def forward_to_live_api(request):
 
 def custom_404(request, exception):
     return render(request, '404.html', status=404)
+
+def privcy(request):
+    return render(request,'privcy.html')
+
+def refund(request):
+    return render(request,'refund.html')
+
+def terms(request):
+    return render(request,'terms.html')
