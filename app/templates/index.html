@@ -33,7 +33,10 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css'%}" rel="stylesheet">
+    
 </head>
+
+
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
     <!-- Spinner Start -->
@@ -147,7 +150,7 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-6 " id="about">
+    <div class="container-xxl py-6 " id="about" style="background: #EFEFF6">
         <div class="container">
             <div class="row g-6">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -172,13 +175,13 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
-                    	<img class="img-fluid rounded" style="height: 80px" src="{% static 'img/SMILE.png'%}" alt="">
+                    	<img class="img-fluid rounded" style="height: 80px" src="{% static 'img/smbg.png'%}" alt="">
                         <h5 class="border-end pe-3 ms-4 me-3 mb-0">Happy Users</h5>
                         <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">120</h2><span class="text-primary fw-bold"> + </span>
                     </div>
-                    <p class="mb-4">Hotel owners across india are delighted with our hotel reservation system and also praising its efficiency and ease of use. Our platform streamlines the entire booking process and hotel management.</p>
+                    <p class="mb-4">Hotel owners across india are delighted with billzify hotel reservation system and also praising its efficiency and ease of use. Our platform streamlines the entire booking process and hotel management.</p>
                     <div class="d-flex align-items-center mb-3">
-                    	<img class="img-fluid rounded" style="height: 80px" src="{% static 'img/BILL.png'%}" alt="">
+                    	<img class="img-fluid rounded" style="height: 80px" src="{% static 'img/brem.png'%}" alt="">
                         <h5 class="border-end pe-3 me-3 ms-4 mb-0">Bills processed everyday</h5>
                         <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1000</h2><span class="text-primary fw-bold"> + </span>
                     </div>
@@ -197,31 +200,244 @@ It ensures the process of billing is convenient and designed to enhance the over
     <!-- About End -->
 
 
-    <!-- Expertise Start -->
-    <div class="container-xxl py-6 pb-5" id="skill">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
-                    <h3 class="display-5 mb-5">Multiple integrations in single dashboard</h3>
-                  
-                    <img class="img-fluid" src="{% static 'img/Loylty.png'%}" alt="">
-                </div>
-                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.5s">
-                    <img class="img-fluid mt-5" style="" src="{% static 'img/intregation.png'%}" alt="">
-                </div>
-            </div>
+  
+
+
+<!-- Expertise Start -->
+<div class="container-xxl my-5 py-6 pb-5" id="skill">
+    <div class="container">
+        <h3 class="display-5 mb-5" >Multiple integrations in single dashboard</h3>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 grid-left"></div> <!-- Left Grid -->
+            <div class="col-lg-6 col-md-6 grid-right mt-md-3 mt-lg-0"></div> <!-- Right Grid -->
         </div>
     </div>
-    <!-- Expertise End -->
+</div>
+
+<style>
+/* Grid Styling */
+.grid-left, .grid-right {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Dynamic columns */
+    gap: 10px;
+}
+
+/* Image Styling */
+.grid-left img, .grid-right img {
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images fit within the box */
+    border-radius: 8px; /* Apply border-radius directly to images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.7s ease; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on all images */
+}
+
+/* Hover Effect for Images in grid-left and grid-right */
+.grid-left img:hover, .grid-right img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Twinkle Effect */
+@keyframes twinkle {
+    0%, 100% { opacity: 1; } /* Fully visible */
+    50% { opacity: 0; } /* Fully hidden */
+}
+
+.twinkle {
+    animation: twinkle 3s infinite; /* Slower hide/show animation */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+    .grid-left, .grid-right {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on mobile */
+    }
+
+    .col-md-6 {
+        margin-top: 1rem; /* Add spacing between grids for mobile */
+    }
+
+    .twinkle {
+        animation: twinkle 2s infinite; /* Slower hide/show animation */
+    }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .grid-left, .grid-right {
+        grid-template-columns: repeat(5, 1fr); /* 5 items per row on tablets */
+    }
+}
+
+/* Laptop Responsiveness */
+@media (min-width: 1024px) {
+    .grid-left, .grid-right {
+        grid-template-columns: repeat(5, 1fr); /* 5 items per row on laptops */
+    }
+
+    .col-md-6 {
+        margin-top: 0; /* No margin-top for desktop and laptop */
+    }
+}
+</style>
+
+<script>
+// Array of Images (Replace with Django static paths if needed)
+const images = [
+    "{% static 'img/b1.png' %}",
+    "{% static 'img/b2.png' %}",
+    "{% static 'img/b4.png' %}",
+    "{% static 'img/b8.png' %}",
+    "{% static 'img/b9.png' %}",
+    "{% static 'img/b10.png' %}",
+    "{% static 'img/b11.png' %}",
+    "{% static 'img/b13.png' %}",
+    "{% static 'img/b14.png' %}",
+    "{% static 'img/b15.png' %}",
+    "{% static 'img/b17.png' %}",
+    "{% static 'img/b18.png' %}",
+    "{% static 'img/b19.png' %}",
+    "{% static 'img/b20.png' %}",
+    "{% static 'img/b21.png' %}",
+    "{% static 'img/b22.png' %}",
+    "{% static 'img/b23.png' %}",
+    "{% static 'img/b7 (3).png' %}",
+    "{% static 'img/b24.png' %}",
+    "{% static 'img/b25.png' %}",
+    "{% static 'img/b26.png' %}",
+    "{% static 'img/b27.png' %}",
+    "{% static 'img/b28.png' %}",
+    "{% static 'img/b29.png' %}",
+    "{% static 'img/b30.png' %}",
+    "{% static 'img/b31.png' %}",
+    "{% static 'img/b32.png' %}",
+    "{% static 'img/b34.png' %}",
+];
+
+// Populate grids dynamically based on screen size
+const populateGrids = () => {
+    const leftGrid = document.querySelector('.grid-left');
+    const rightGrid = document.querySelector('.grid-right');
+
+    // Clear existing grid content
+    leftGrid.innerHTML = '';
+    rightGrid.innerHTML = '';
+
+    const isMobile = window.innerWidth <= 767;
+    const isTablet = window.innerWidth >= 768 && window.innerWidth <= 1023;
+    const isDesktop = window.innerWidth >= 1024;
+
+    let imagesToShow = [];
+
+    if (isMobile) {
+        // For Mobile (Max Width 767px): 15 images from left, 3 images from right (total 18)
+        imagesToShow = [...images];
+        let repeatedImages = [...images];
+        while (imagesToShow.length < 18) {
+            imagesToShow.push(...repeatedImages);
+        }
+        imagesToShow = imagesToShow.slice(0, 18); // Ensure 18 images total
+
+        // Left grid: 15 images
+        for (let i = 0; i < 15; i++) {
+            const imageElement = createImageElement(imagesToShow[i]);
+            leftGrid.appendChild(imageElement);
+        }
+
+        // Right grid: 3 images
+        for (let i = 15; i < 18; i++) {
+            const imageElement = createImageElement(imagesToShow[i]);
+            rightGrid.appendChild(imageElement);
+        }
+    } else if (isTablet || isDesktop) {
+        // For Tablet and Desktop (width >= 768px): 15 images from left and 15 images from right (total 30)
+        imagesToShow = [...images];
+        let repeatedImages = [...images];
+        while (imagesToShow.length < 30) {
+            imagesToShow.push(...repeatedImages);
+        }
+        imagesToShow = imagesToShow.slice(0, 30); // Ensure 30 images total
+
+        // Left grid: 15 images
+        for (let i = 0; i < 15; i++) {
+            const imageElement = createImageElement(imagesToShow[i]);
+            leftGrid.appendChild(imageElement);
+        }
+
+        // Right grid: 15 images
+        for (let i = 15; i < 30; i++) {
+            const imageElement = createImageElement(imagesToShow[i]);
+            rightGrid.appendChild(imageElement);
+        }
+    }
+};
+
+// Function to create a single image element
+const createImageElement = (imageSrc) => {
+    const img = document.createElement('img');
+    img.src = imageSrc;
+    img.alt = "Image";
+    return img;
+};
+
+// Randomly add twinkle effect
+const addTwinkleEffect = () => {
+    const gridItems = document.querySelectorAll('.grid-left img, .grid-right img'); // Only images inside grid
+
+    // Remove existing twinkle effects
+    gridItems.forEach(item => item.classList.remove('twinkle'));
+
+    // Randomly select unique items to twinkle
+    const visibleItems = [...gridItems]; // Store all visible items in a new array
+    const randomItems = [];
+
+    while (randomItems.length < 4 && visibleItems.length > 0) {
+        // Randomly select an image and ensure it is unique
+        const randomIndex = Math.floor(Math.random() * visibleItems.length);
+        const selectedItem = visibleItems.splice(randomIndex, 1)[0]; // Remove selected item from array
+        randomItems.push(selectedItem);
+    }
+
+    // Apply twinkle effect to the selected random items
+    randomItems.forEach(item => item.classList.add('twinkle'));
+};
+
+// Call functions on page load
+populateGrids();
+addTwinkleEffect();
+
+// Adjust grids and twinkle effect on resize
+window.addEventListener('resize', () => {
+    populateGrids();
+    addTwinkleEffect();
+});
+
+// Repeat twinkle effect every 5 seconds
+setInterval(addTwinkleEffect, 5000);
+</script>
+<!-- Expertise End -->
+
+
+
+
+  
+
+
+<!-- Expertise End -->
+
+
+
+
 
 
    
     <!-- Service Start -->
-    <div class="container-fluid  my-5 py-6" id="service" style="background: #EFEFF6">
+    <div class="container-fluid  my-5 py-6 " id="service" style="background: #EFEFF6">
         <div class="container">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-12">
-                    <h2 class=" text-gray mt-0 mb-0">The complete hotel management System <br> which offers everything.</h2>
+                    <h2 class=" text-gray mt-0 mb-0">Billzify - The Complete Hotel Management Software <br> Which Offers Everything.</h2>
                 </div>
                 
             </div>
@@ -632,52 +848,27 @@ With our easy-to-use and customizable website builder - hotel owners can create 
     <!-- <a href="#" class="btn btn-sm btn-primary btn-sm-square back-to-top"><i class="bi bi-arrow-up"></i></a>
  -->
     
- 	<div class="chatnowdiv">
- 		<div>
- 		<img class="img-fluid" src="{% static 'img/chatboardheader.png'%}" style="width:100%;border-radius:8px;" alt="">
- 		<a onclick="hidechatnowbtn()" ><span style="margin-top: -110px;position: relative;" class="text-dark float-end pe-2"><i class="bi bi-x" style="font-size:30px;color: white"></i></span></a>
+ 	
 
- 		<div class="ms-4 mt-3" style="margin-top:5px;width: 50% ">
- 			<p class="p-2 card">How Can I Help You?</p>
- 			<button class="btn btn-primary " id="openscanner" style="margin-top: -5px">Chat Now</button>
- 			<button class="btn btn-primary" id="openhelp" style="margin-top: -5px">Help!</button>
- 		</div>
-
- 		<div class="float-end w-50 mt-3 card me-4" id="scannerdiv" style="display: none">
-				<center><span style="font-weight:500">Scan Me</span><br>
-					<img class="img-fluid" src="{% static 'img/qrs.png'%}" style=";border-radius:8px;height: 160px" alt="" /><br>
-					<span>OR</span>
-					<span>Click The Button</span><br>
-					<a href="https://wa.me/message/BWCMUEL3U54RF1
-" class="btn mb-3 mt-2 btn-primary">Live Chat</a>
-
-				</center>
- 		</div>
-
- 		<div class="float-end w-75 mt-3 card me-4" id="helpdiv" style="display: none">
- 			<p class="p-2" style="font-weight:500">For assistance, please send an email</p>
- 			<p class="p-2">To,<b>Billzifyhelp@gmail.com</b>
- 				Thanks!
- 			</p>
-
- 		</div>
-
-
- 			
- 		</div> 		
-<div style="height: 35px;width: 100%;background: #8C52FF;bottom: 0;position: fixed;position: absolute;border-radius: 0px 0px 8px 8px">
-	<div style="height: 5px;background: #5E17EB;"></div>
- 			
- 		</div>
- 	</div>
- 		
- 	</div>
-
-    <a href="#" onclick="showchatnowbtn()" class="btn  btn-primary chat-withusicon" style="border-radius:15px;box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;"><i class="bi bi-chat-left"></i></a>
-
-  <!--  <a href="#" onclick="showchatnowbtn()" class="btn    chat-withus" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
-    	Chat With US 👋
-    </a> -->
+    <a href="https://wa.me/message/BWCMUEL3U54RF1"   class="btn  btn-light chat-withusicon" style="height:55px;width:55px;border-radius:15px;box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
+        
+        <p style="font-size:28px;  display:inline-block; animation:wave 1.5s infinite, zoom 1.5s infinite;">👋</p></a>
+        <style>
+            @keyframes wave {
+                0% { transform: rotate(0deg); }
+                50% { transform: rotate(15deg); }
+                100% { transform: rotate(0deg); }
+            }
+            
+            @keyframes zoom {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.2); }
+                100% { transform: scale(1); }
+            }
+            </style>
+ {% comment %} <a href="https://wa.me/message/BWCMUEL3U54RF1" onclick="showchatnowbtn()" class="btn  btn-light  chat-withus" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
+    	Chat With US !
+    </a>   {% endcomment %}
 
 <script>
 	function showchatnowbtn() {
