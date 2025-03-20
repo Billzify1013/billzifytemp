@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid bg-white my-6 mt-5 py-6 " id="price" >
+    <div class="container mt-2">
+        <div class="row g-5 wow fadeInUp" data-wow-delay="0.1s">
+       <div class="col-lg-12" style="margin-top: -15px">
+                <center><h1 class=" text-gray mt-0 mb-2">Simple and pocket-friendly pricing</h1>
+                    <p style="color: gray">Save cost and improve efficiency in hotel management with our budget friendly pricing!</p>
+                </center>
+            </div>
+           </div>
+        <div class="row g-1  align-items-center" style="margin-top:15px">
+            <div class="col-lg-6 py-0 pb-0 pt-lg-0">
+                <!-- <h3 class=" text-primary pe-3 me-3 mb-0"
+                style="font-family: Brush Script" 
+                >Billzify</h3> -->
+                
+                <h1 class=" mb-2 " style="color:#8C52FF">Billzify Pricing </h1>
+                <p class=" pe-3 me-3 mb-0" style="font-weight: 500;color: #4b5563">Explore our budget-friendly pricing - offering excellent value without compromising quality.</p>
+                <h1 style="color:#4b5563;font-family: 'Nunito Sans', sans-serif;font-size:55px" class="mt-4">₹1</h1>
+                <p class=" pe-3 me-3 mb-0" style="font-weight: 500;color: #4b5563">Per Day/Per Room.</p>
+                
+                 <a href="#contact"  class="btn btn-primary py-3 mt-4 px-4 ">Get A Free Demo</a>
+                  <div id="leftp">
+                  <p class="mb-3 mt-4"><i class="far fa-check-circle text-primary me-3"></i>Affordable price</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Seamless integration</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>User friendly interface </p>
+                <p class="mb-3 "><i class="far fa-check-circle text-primary me-3"></i>Seamless online ordering system</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Universal cloud-based system for all operating systems</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>24x7 support</p>
+            </div>
+            </div>
+            <div class="col-lg-6 mb-5 mt-5">
+                <img class="img-fluid" src="{% static 'img/pricing1.png'%}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+
+
+{% endblock %}

@@ -61,3 +61,12 @@ def refund(request):
 
 def terms(request):
     return render(request,'terms.html')
+
+def price(request):
+    return render(request,'pricing.html')
+
+def about(request):
+    return render(request,'about.html')
+
+def website(request):
+    return render(request,'websitefree.html')
