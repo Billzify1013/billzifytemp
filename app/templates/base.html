@@ -108,20 +108,20 @@
     <!-- Navigation Links -->
     <ul class="nav-links" >
       <li><a href="{% url 'index' %}">Home</a></li>
-      <li><a href="{% url 'about' %}">About</a></li>
       {% comment %} <li><a href="#service">Services</a></li> {% endcomment %}
       <li class="dropdown">
         <a href="#service">Products ▼</a>
         <ul class="dropdown-menu">
             <li><a href="{% url 'PMS' %}">Property Management System</a></li>
             <li><a href="{% url 'channelmanager' %}">Channel Manager</a></li>
-            <li><a href="#booking-engine">Booking Engine</a></li>
+            <li><a href="{% url 'BookingEngine' %}">Booking Engine</a></li>
             {% comment %} <li><a href="#revenue-management">Revenue Management System</a></li>
             <li><a href="#revenue-management">Reviews Management System</a></li> {% endcomment %}
         </ul>
     </li>
     
       <li><a href="{% url 'price' %}">Pricing</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
       <li><a href="https://wa.me/message/BWCMUEL3U54RF1">Contact</a></li>
     
     </ul>
@@ -199,20 +199,28 @@
     <!-- Copyright Start -->
     <div class="container-xxl  py-4 w-100" style="background: #EFEFF6">
         <div class="container">
+                    <a class="text-dark" href="{%url 'index' %}">Billzify</a><br>
+                    <a class="text-dark" href="{%url 'PMS' %}">Property Management System</a><br>
+                    <a class="text-dark" href="{%url 'channelmanager' %}">Channel Manager</a><br>
+                    <a class="text-dark" href="{%url 'BookingEngine' %}">Booking Engine</a><br>
+                    <a class="text-dark" href="{%url 'price' %}">Pricing</a><br>
+                    <a class="text-dark" href="{%url 'about' %}">About</a><br><br><br>
             <div class="row">
+                
+              
                 <div class="col-md-8 text-center text-md-start mb-3 mb-md-0">
+                    
                      <img class="img-fluid" src="{% static 'img/illfy.png'%}" style="height:35px" alt=""><br><br>
                      &copy; Billzify, All rights reserved.
                      <span style="font-size:24px;">&middot;</span>
-                     <a href="{% url 'terms' %}" class="text-black-50">Terms</a>
-                     <span style="font-size:24px;">&middot;</span>
-                     <a href="{% url 'privcy' %}" class="text-black-50">Privacy</a>
-                     <span style="font-size:24px;">&middot;</span>
-                     <a href="{% url 'refund' %}" class="text-black-50">Refund policy</a>
+                    
                 </div>
 
 
                 <div class="col-md-4 text-center text-md-end">
+                    
+
+                    
 
                     <a class="btn btn-light mb-2" href="https://www.instagram.com/billzifyindia/"><small class="fab fa-instagram text-primary"></small></a>
                     <a class="btn btn-light mb-2"><small class="fab fa-facebook-f text-primary"></small></a>
@@ -220,8 +228,6 @@
                     <a class="btn btn-light mb-2"><small class="fab fa-linkedin-in text-primary"></small></a>
 
                     <br>
-                    {% comment %} <a href="{% url 'loginpage' %}" class="btn btn-outline-primary ">Billzify</a> {% endcomment %}
-                    {% comment %} <a href="https://www.dineflow.billzify.com" class="btn btn-outline-primary ">DineFlow</a> {% endcomment %}
                     
                 </div>
 
@@ -288,7 +294,7 @@ function hidechatnowbtn() {
 <!-- Template Javascript -->
 <script src="{% static 'js/main.js'%}"></script>
 </body>
-{% comment %} <script type="text/javascript">
+ <script type="text/javascript">
 // Disable right-click
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
@@ -309,5 +315,5 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 });
-</script> {% endcomment %}
+</script> 
 </html>

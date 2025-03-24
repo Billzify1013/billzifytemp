@@ -10,6 +10,7 @@ urlpatterns = [
     path('about/', views.about,name="about"),
     path('channelmanager/', views.channelmanager,name="channelmanager"),
     path('PMS/', views.PMS,name="PMS"),
+    path('BookingEngine/', views.BookingEngine,name="BookingEngine"),
     path('addfreedemo/', views.index,name="addfreedemo"),
     path('terms/', views.terms,name="terms"),
     path('privcy/', views.privcy,name="privcy"),

@@ -76,3 +76,6 @@ def channelmanager(request):
 
 def PMS(request):
     return render(request,'pms.html')
+
+def BookingEngine(request):
+    return render(request,'be.html')
