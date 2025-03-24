@@ -70,3 +70,9 @@ def about(request):
 
 def website(request):
     return render(request,'websitefree.html')
+
+def channelmanager(request):
+    return render(request,'channel.html')
+
+def PMS(request):
+    return render(request,'pms.html')

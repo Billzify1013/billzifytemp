@@ -3,11 +3,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    {% comment %} <meta charset="utf-8">
     <title>BILLZIFY</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta name="description" content="Billzify is India's most trusted hotel management system and channel manager. With Billzify, streamline OTA bookings, manage inventory, and enhance hotel operations effortlessly. Choose Billzify for a complete all-in-one solution for Indian hotels.">
+    <meta name="description" content="Billzify is India's most trusted hotel management system and channel manager. With Billzify, streamline OTA bookings, manage inventory, and enhance hotel operations effortlessly. Choose Billzify for a complete all-in-one solution for Indian hotels."> {% endcomment %}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -34,6 +34,49 @@
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css'%}" rel="stylesheet">
     
+
+
+    <style>
+        /* Dropdown Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 450px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+}
+
+.dropdown-menu a:hover {
+    background: #ddd;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+    </style>
+
 </head>
 
 
@@ -66,7 +109,18 @@
     <ul class="nav-links" >
       <li><a href="{% url 'index' %}">Home</a></li>
       <li><a href="{% url 'about' %}">About</a></li>
-      <li><a href="#service">Services</a></li>
+      {% comment %} <li><a href="#service">Services</a></li> {% endcomment %}
+      <li class="dropdown">
+        <a href="#service">Products ▼</a>
+        <ul class="dropdown-menu">
+            <li><a href="{% url 'PMS' %}">Property Management System</a></li>
+            <li><a href="{% url 'channelmanager' %}">Channel Manager</a></li>
+            <li><a href="#booking-engine">Booking Engine</a></li>
+            {% comment %} <li><a href="#revenue-management">Revenue Management System</a></li>
+            <li><a href="#revenue-management">Reviews Management System</a></li> {% endcomment %}
+        </ul>
+    </li>
+    
       <li><a href="{% url 'price' %}">Pricing</a></li>
       <li><a href="https://wa.me/message/BWCMUEL3U54RF1">Contact</a></li>
     
@@ -143,7 +197,7 @@
 {% endblock %}
 
     <!-- Copyright Start -->
-    <div class="container-fluid  py-4" style="background: #EFEFF6">
+    <div class="container-xxl  py-4 w-100" style="background: #EFEFF6">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 text-center text-md-start mb-3 mb-md-0">
