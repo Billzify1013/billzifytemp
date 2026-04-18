@@ -4,6 +4,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import handler404
 
+from django.contrib.sitemaps.views import sitemap
+from billzifyfront.sitemaps import StaticViewSitemap
+
+sitemaps = {
+    'static': StaticViewSitemap,
+}
+
 urlpatterns = [
     path('', views.index,name="index"),
     path('price/', views.price,name="price"),
@@ -17,6 +24,8 @@ urlpatterns = [
     path('refund/', views.refund,name="refund"),
     path('website/', views.website,name="website"),
     path('proxy-create-demo/', views.forward_to_live_api, name='proxy_create_demo'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, 
+         name='django.contrib.sitemaps.views.sitemap'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
