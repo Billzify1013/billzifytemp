@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --navy:#0B1F3A;
+  --navy-light:#132A4E;
+  --gold:#C9932A;
+  --gold-light:#E8B84B;
+  --cream:#FAF7F2;
+  --cream-dark:#F0EAE0;
+  --text:#1A1A2E;
+  --text-muted:#5A6474;
+  --text-light:#8A93A2;
+  --white:#FFFFFF;
+  --border:rgba(11,31,58,0.10);
+  --radius:12px;
+  --radius-lg:20px;
+}
+
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{background:var(--navy);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;position:sticky;top:0;z-index:100}
+.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--gold-light);text-decoration:none;letter-spacing:-0.5px}
+.logo span{color:var(--white)}
+.nav-links{display:flex;align-items:center;gap:0.2rem}
+nav a.nav-link{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s;padding:0.4rem 0.9rem;border-radius:6px}
+nav a.nav-link:hover{color:var(--gold-light)}
+.nav-cta{background:var(--gold)!important;color:var(--white)!important;padding:0.45rem 1.2rem!important;border-radius:50px!important;font-weight:600!important}
+.nav-cta:hover{background:var(--gold-light)!important}
+
+/* TAGS */
+.tag{display:inline-block;padding:0.25rem 0.8rem;border-radius:50px;font-size:0.72rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase}
+.tag-revenue{background:rgba(201,147,42,0.12);color:#8A5E0A}
+.tag-ota{background:rgba(11,31,58,0.08);color:var(--navy)}
+.tag-tips{background:rgba(30,150,90,0.1);color:#1E5F3A}
+.tag-tech{background:rgba(100,60,180,0.1);color:#4A2A9A}
+.tag-guest{background:rgba(200,50,50,0.09);color:#8B1A1A}
+.tag-seo{background:rgba(20,100,180,0.1);color:#0E3A6E}
+
+/* READ TIME */
+.read-time{font-size:0.8rem;color:var(--text-light);display:flex;align-items:center;gap:0.3rem}
+.post-meta{display:flex;align-items:center;gap:0.8rem;flex-wrap:wrap}
+
+/* BUTTONS */
+.btn-primary{background:var(--gold);color:var(--white);padding:0.8rem 2rem;border-radius:50px;font-weight:600;text-decoration:none;font-size:0.9rem;transition:background 0.2s,transform 0.15s;display:inline-flex;align-items:center;gap:0.4rem}
+.btn-primary:hover{background:var(--gold-light);transform:scale(1.03)}
+.btn-ghost{background:rgba(255,255,255,0.08);color:var(--white);padding:0.8rem 2rem;border-radius:50px;font-weight:500;text-decoration:none;font-size:0.9rem;border:1px solid rgba(255,255,255,0.2);transition:background 0.2s}
+.btn-ghost:hover{background:rgba(255,255,255,0.15)}
+
+/* FOOTER */
+footer{background:var(--navy);padding:2.5rem 5%;text-align:center}
+footer p{color:rgba(255,255,255,0.4);font-size:0.82rem}
+footer a{color:var(--gold-light);text-decoration:none}
+footer a:hover{color:var(--white)}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.85rem;transition:color 0.2s}
+.footer-links a:hover{color:var(--gold-light)}
+
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,var(--navy) 0%,#1a3560 100%);border-radius:var(--radius-lg);padding:3.5rem 4%;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(201,147,42,0.15) 0%,transparent 70%);top:-100px;right:-80px;pointer-events:none}
+.cta-banner h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);margin-bottom:0.8rem}
+.cta-banner p{color:rgba(255,255,255,0.6);margin-bottom:2rem;font-size:0.95rem;max-width:480px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* RESPONSIVE NAV */
+@media(max-width:600px){
+  nav{padding:0 4%}
+  .nav-links a:not(.nav-cta){display:none}
+}

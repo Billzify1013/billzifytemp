@@ -79,3 +79,12 @@ def PMS(request):
 
 def BookingEngine(request):
     return render(request,'be.html')
+
+def blog(request):
+    return render(request,'blog.html')
+
+def blogcmguide(request):
+    return render(request,'channel-manager-guide.html')
+
+def blogdyprice(request):
+    return render(request,'dynamic-pricing-strategy.html')
