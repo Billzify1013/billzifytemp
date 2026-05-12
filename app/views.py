@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.views.generic import TemplateView
 # Create your views here.
 
 def index(request):
@@ -88,3 +88,11 @@ def blogcmguide(request):
 
 def blogdyprice(request):
     return render(request,'dynamic-pricing-strategy.html')
+
+def cmapi(request):
+    return render(request,'cmapi.html')
+
+
+class RobotsTxtView(TemplateView):
+    template_name = "robots.txt"
+    content_type = "text/plain"

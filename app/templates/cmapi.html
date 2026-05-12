@@ -1,0 +1,1228 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- =========== PRIMARY SEO META =========== -->
+<title>Channel Manager API for PMS | Billzify - Connect to Airbnb, Booking.com, MakeMyTrip, Goibibo & Google</title>
+<meta name="description" content="Billzify Channel Manager API for PMS companies. Sync availability, update rates, manage guest communication across Airbnb, Booking.com, MakeMyTrip, Goibibo, Agoda, Expedia, and Google Hotel Ads in real-time. Best channel manager API in India." />
+<meta name="keywords" content="channel manager API, channel manager API for PMS, Billzify API, hotel channel manager API, OTA API integration, Airbnb API, Booking.com API, MakeMyTrip API, Goibibo API, Google Hotel API, PMS channel manager, availability sync API, rate update API, guest messaging API, hotel API India, best channel manager API, channel manager for PMS companies" />
+<meta name="author" content="Billzify" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="https://www.billzify.com/api/channel-manager" />
+
+<!-- =========== OPEN GRAPH =========== -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Channel Manager API for PMS Companies | Billzify" />
+<meta property="og:description" content="Plug-and-play channel manager API to connect your PMS with Airbnb, Booking.com, MakeMyTrip, Goibibo, Google Hotel Ads and 100+ OTAs. Real-time availability, rates and guest messaging." />
+<meta property="og:url" content="https://www.billzify.com/api/channel-manager" />
+<meta property="og:site_name" content="Billzify" />
+<meta property="og:image" content="https://www.billzify.com/assets/og-channel-manager-api.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_IN" />
+
+<!-- =========== TWITTER CARD =========== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Billzify Channel Manager API for PMS Companies" />
+<meta name="twitter:description" content="Connect your PMS to Airbnb, Booking.com, MakeMyTrip, Goibibo, Google & 100+ OTAs with one API." />
+<meta name="twitter:image" content="https://www.billzify.com/assets/twitter-channel-manager-api.jpg" />
+
+<!-- =========== STRUCTURED DATA: Organization =========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Billzify",
+  "url": "https://www.billzify.com",
+  "logo": "https://www.billzify.com/assets/logo.svg",
+  "description": "Billzify provides Channel Manager API to PMS companies for OTA connectivity, availability and rate sync, and guest communication.",
+  "sameAs": [
+    "https://www.linkedin.com/company/billzify",
+    "https://twitter.com/billzify"
+  ]
+}
+</script>
+
+<!-- =========== STRUCTURED DATA: Product/SoftwareApplication =========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Billzify Channel Manager API",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Cloud / REST API",
+  "description": "Channel Manager API for PMS companies to connect with Airbnb, Booking.com, MakeMyTrip, Goibibo, Agoda, Expedia, Google Hotel Ads and other OTAs. Real-time availability, rate updates, reservation delivery, and unified guest messaging.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "description": "Contact sales for API pricing"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "183"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Billzify"
+  }
+}
+</script>
+
+<!-- =========== STRUCTURED DATA: FAQ =========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Billzify Channel Manager API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Billzify Channel Manager API is a REST-based API designed for PMS companies to connect their systems with global OTAs like Airbnb, Booking.com, MakeMyTrip, Goibibo, Agoda, Expedia, and Google Hotel Ads. It enables real-time availability sync, rate updates, reservation delivery, and unified guest messaging."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which OTAs does Billzify Channel Manager API support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Billzify supports 100+ OTAs including Airbnb, Booking.com, MakeMyTrip, Goibibo, Agoda, Expedia, Google Hotel Ads, Hotels.com, Trip.com, Yatra, EaseMyTrip, and more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can PMS companies manage Airbnb messages through Billzify API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Billzify provides a unified guest messaging API that allows PMS companies to send and receive Airbnb messages, Booking.com messages, MakeMyTrip and Goibibo communications from a single endpoint."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Billzify support Google Hotel Ads promotions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Billzify Channel Manager API supports Google Hotel Ads promotions, rate plans and availability feeds, allowing properties to be discovered directly through Google Search and Maps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast is rate and availability sync?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Billzify Channel Manager API delivers real-time push updates with typical sync latency under 2 seconds across all connected OTAs."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- =========== STRUCTURED DATA: Breadcrumb =========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.billzify.com/" },
+    { "@type": "ListItem", "position": 2, "name": "API", "item": "https://www.billzify.com/api/" },
+    { "@type": "ListItem", "position": 3, "name": "Channel Manager API", "item": "https://www.billzify.com/api/channel-manager" }
+  ]
+}
+</script>
+
+<!-- =========== FONTS =========== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #0B0F1A;
+    --bg-2: #0F1524;
+    --surface: #131A2C;
+    --surface-2: #182241;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+    --text: #E8ECF6;
+    --text-muted: #9BA3BF;
+    --text-dim: #6B7393;
+    --accent: #4F8CFF;
+    --accent-2: #7B5CFF;
+    --accent-glow: rgba(79,140,255,0.35);
+    --green: #2ECC8B;
+    --yellow: #FFC857;
+    --pink: #FF6B9D;
+    --code-bg: #0A0E1A;
+    --radius: 14px;
+    --radius-sm: 10px;
+    --shadow-soft: 0 1px 0 rgba(255,255,255,0.04) inset, 0 20px 60px rgba(0,0,0,0.4);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Instrument Serif', Georgia, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  *{ box-sizing: border-box; margin: 0; padding: 0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Subtle grid backdrop */
+  body::before{
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1200px 600px at 80% -10%, rgba(123,92,255,0.18), transparent 60%),
+      radial-gradient(900px 500px at -10% 20%, rgba(79,140,255,0.18), transparent 60%),
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: auto, auto, 56px 56px, 56px 56px;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+  ul{ list-style: none; }
+
+  .container{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== NAVBAR ===== */
+  .nav-wrap{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(11,15,26,0.72);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    height: 68px;
+  }
+  .logo-slot{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 160px;
+  }
+  .logo-box{
+    /* SPACE RESERVED FOR BILLZIFY LOGO IMAGE */
+    width: 140px;
+    height: 38px;
+    border-radius: 8px;
+    background:
+      linear-gradient(135deg, rgba(79,140,255,0.15), rgba(123,92,255,0.15)),
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 6px, transparent 6px 12px);
+    border: 1px dashed var(--border-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+  /* When you add a logo, replace .logo-box content with: <img src="logo.svg" alt="Billzify"> */
+
+  .nav-links{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+  }
+  .nav-link{
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: all .2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-link:hover{ color: var(--text); background: rgba(255,255,255,0.04); }
+  .nav-link .chev{ font-size: 10px; opacity: .6; }
+
+  .nav-cta{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all .2s ease;
+    font-family: inherit;
+  }
+  .btn-ghost{
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border-strong);
+  }
+  .btn-ghost:hover{ background: rgba(255,255,255,0.05); }
+  .btn-primary{
+    background: linear-gradient(180deg, #5C97FF, #3B6FE0);
+    color: #fff;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 24px var(--accent-glow);
+  }
+  .btn-primary:hover{ transform: translateY(-1px); box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 12px 30px var(--accent-glow); }
+
+  /* ===== HERO ===== */
+  .hero{
+    padding: 96px 0 64px;
+    position: relative;
+  }
+  .eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px 6px 8px;
+    border: 1px solid var(--border-strong);
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.03);
+    font-family: var(--font-mono);
+    letter-spacing: 0.04em;
+  }
+  .eyebrow .pill{
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  h1.hero-title{
+    margin-top: 22px;
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    max-width: 18ch;
+  }
+  h1 .accent{
+    background: linear-gradient(135deg, #8FB4FF, #B59CFF 60%, #FF8FBF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-style: italic;
+  }
+  h1 .underline{
+    position: relative;
+    white-space: nowrap;
+  }
+  h1 .underline::after{
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 4px;
+    height: 8px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    opacity: .35;
+    border-radius: 4px;
+    z-index: -1;
+  }
+
+  .hero-sub{
+    margin-top: 28px;
+    max-width: 64ch;
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .hero-actions{
+    margin-top: 36px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .meta-row{
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    color: var(--text-dim);
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  .meta-row .dot{ width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px var(--green); display: inline-block; margin-right: 8px; vertical-align: middle; }
+
+  /* ===== HERO CODE BLOCK ===== */
+  .hero-grid{
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .code-card{
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    position: relative;
+  }
+  .code-card::before{
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(79,140,255,0.4), transparent 40%, rgba(123,92,255,0.4));
+    z-index: -1;
+    filter: blur(14px);
+    opacity: .6;
+  }
+  .code-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+  }
+  .code-tabs{ display: flex; gap: 4px; }
+  .code-tab{
+    padding: 6px 12px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .code-tab.active{ background: rgba(255,255,255,0.06); color: var(--text); }
+  .code-dots{ display: flex; gap: 6px; }
+  .code-dots span{ width: 10px; height: 10px; border-radius: 50%; }
+  .code-dots span:nth-child(1){ background: #FF5F57; }
+  .code-dots span:nth-child(2){ background: #FEBC2E; }
+  .code-dots span:nth-child(3){ background: #28C840; }
+
+  pre.code{
+    margin: 0;
+    padding: 22px 22px 26px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.7;
+    color: #C8D1E8;
+    overflow-x: auto;
+  }
+  .tk-comment{ color: #5B6580; font-style: italic; }
+  .tk-key{ color: #7BA9FF; }
+  .tk-str{ color: #9CE3B0; }
+  .tk-num{ color: #FFC857; }
+  .tk-method{ color: #FF8FBF; }
+  .tk-fn{ color: #B59CFF; }
+  .tk-punc{ color: #6B7393; }
+
+  /* ===== SECTION ===== */
+  section{ padding: 96px 0; position: relative; }
+  .sec-head{ max-width: 720px; margin-bottom: 56px; }
+  .sec-eyebrow{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  h2.sec-title{
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(32px, 4vw, 52px);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  h2.sec-title .accent{
+    background: linear-gradient(135deg, #8FB4FF, #FF8FBF);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    font-style: italic;
+  }
+  .sec-sub{ margin-top: 16px; color: var(--text-muted); font-size: 17px; max-width: 60ch; }
+
+  /* ===== OTA STRIP ===== */
+  .ota-strip{
+    padding: 56px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.015);
+  }
+  .ota-label{
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+    margin-bottom: 32px;
+  }
+  .ota-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px;
+  }
+  .ota-cell{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 18px 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: all .2s ease;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 60px;
+  }
+  .ota-cell:hover{ border-color: var(--border-strong); color: var(--text); transform: translateY(-2px); }
+
+  /* ===== FEATURES ===== */
+  .feat-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .feat{
+    background: linear-gradient(180deg, var(--surface), var(--bg-2));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: all .25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .feat::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(400px 200px at 100% 0%, rgba(79,140,255,0.08), transparent 70%);
+    opacity: 0;
+    transition: opacity .3s ease;
+    pointer-events: none;
+  }
+  .feat:hover{ border-color: var(--border-strong); transform: translateY(-3px); }
+  .feat:hover::after{ opacity: 1; }
+  .feat-icon{
+    width: 44px; height: 44px;
+    border-radius: 11px;
+    display: grid; place-items: center;
+    background: linear-gradient(135deg, rgba(79,140,255,0.15), rgba(123,92,255,0.15));
+    border: 1px solid var(--border-strong);
+    margin-bottom: 18px;
+    font-size: 20px;
+  }
+  .feat h3{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .feat p{ color: var(--text-muted); font-size: 14px; line-height: 1.65; }
+  .feat .tag{
+    display: inline-block;
+    margin-top: 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    border: 1px solid rgba(79,140,255,0.3);
+    background: rgba(79,140,255,0.08);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  /* ===== ENDPOINTS / API REFERENCE ===== */
+  .endpoint-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .endpoint-list{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+  }
+  .ep-item{
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 12px;
+    padding: 14px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .15s ease;
+    align-items: center;
+  }
+  .ep-item:hover{ background: rgba(255,255,255,0.03); }
+  .ep-item.active{ background: rgba(79,140,255,0.08); }
+  .method{
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    padding: 4px 6px;
+    border-radius: 5px;
+    letter-spacing: 0.04em;
+  }
+  .m-get{ background: rgba(46,204,139,0.15); color: var(--green); }
+  .m-post{ background: rgba(123,92,255,0.18); color: #B59CFF; }
+  .m-put{ background: rgba(255,200,87,0.15); color: var(--yellow); }
+  .m-del{ background: rgba(255,107,157,0.15); color: var(--pink); }
+  .ep-path{ font-family: var(--font-mono); font-size: 13px; color: var(--text); }
+  .ep-desc{ font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+
+  .endpoint-detail{
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  /* ===== STEP / FLOW ===== */
+  .flow-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    position: relative;
+  }
+  .step{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    position: relative;
+  }
+  .step-num{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 38px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+  .step h4{ font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .step p{ font-size: 13px; color: var(--text-muted); }
+
+  /* ===== STATS ===== */
+  .stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    overflow: hidden;
+  }
+  .stat{ padding: 32px 28px; border-right: 1px solid var(--border); }
+  .stat:last-child{ border-right: none; }
+  .stat-num{
+    font-family: var(--font-display);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1;
+    background: linear-gradient(135deg, #8FB4FF, #B59CFF);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .stat-label{ margin-top: 10px; font-size: 13px; color: var(--text-muted); }
+
+  /* ===== FAQ ===== */
+  .faq-list{ max-width: 880px; margin: 0 auto; }
+  .faq-item{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    cursor: pointer;
+  }
+  .faq-q{
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 17px; font-weight: 600; color: var(--text);
+  }
+  .faq-q .plus{
+    width: 24px; height: 24px; border-radius: 50%;
+    border: 1px solid var(--border-strong);
+    display: grid; place-items: center;
+    font-size: 14px; color: var(--text-muted);
+    transition: transform .2s ease;
+  }
+  .faq-item.open .faq-q .plus{ transform: rotate(45deg); }
+  .faq-a{
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    transition: max-height .3s ease, margin-top .3s ease;
+  }
+  .faq-item.open .faq-a{ max-height: 300px; margin-top: 14px; }
+
+  /* ===== CTA BAND ===== */
+  .cta-band{
+    background:
+      radial-gradient(800px 300px at 30% 0%, rgba(79,140,255,0.25), transparent 60%),
+      radial-gradient(800px 300px at 80% 100%, rgba(123,92,255,0.25), transparent 60%),
+      var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 22px;
+    padding: 64px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-band h2{ font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px); letter-spacing: -0.02em; }
+  .cta-band p{ color: var(--text-muted); margin: 18px auto 28px; max-width: 56ch; font-size: 17px; }
+
+  /* ===== FOOTER ===== */
+  footer{
+    border-top: 1px solid var(--border);
+    padding: 56px 0 32px;
+    margin-top: 48px;
+  }
+  .foot-grid{
+    display: grid;
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  .foot-col h5{ font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 14px; letter-spacing: 0.02em; }
+  .foot-col ul li{ margin-bottom: 10px; }
+  .foot-col a{ color: var(--text-muted); font-size: 14px; transition: color .15s ease; }
+  .foot-col a:hover{ color: var(--text); }
+  .foot-bottom{
+    border-top: 1px solid var(--border);
+    padding-top: 22px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; color: var(--text-dim);
+    flex-wrap: wrap; gap: 12px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 980px){
+    .hero-grid{ grid-template-columns: 1fr; }
+    .feat-grid, .flow-grid{ grid-template-columns: 1fr 1fr; }
+    .stats{ grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(2){ border-right: none; }
+    .stat:nth-child(1), .stat:nth-child(2){ border-bottom: 1px solid var(--border); }
+    .ota-grid{ grid-template-columns: repeat(4, 1fr); }
+    .endpoint-wrap{ grid-template-columns: 1fr; }
+    .foot-grid{ grid-template-columns: 1fr 1fr; }
+    .nav-links{ display: none; }
+  }
+  @media (max-width: 600px){
+    .feat-grid, .flow-grid, .stats{ grid-template-columns: 1fr; }
+    .ota-grid{ grid-template-columns: repeat(2, 1fr); }
+    section{ padding: 64px 0; }
+    .hero{ padding: 56px 0 32px; }
+    .foot-grid{ grid-template-columns: 1fr; }
+    .stat{ border-right: none !important; border-bottom: 1px solid var(--border); }
+  }
+
+  /* Reveal animation */
+  [data-reveal]{ opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
+  [data-reveal].in{ opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- ============================ NAVBAR ============================ -->
+<header class="nav-wrap">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a href="/" class="logo-slot" aria-label="Billzify Home">
+        <!-- ⬇ REPLACE THIS DIV WITH <img src="logo.svg" alt="Billzify"> -->
+        <img class="img-fluid" src="{% static 'img/illfy.png'%}" style="height: 30px;" alt="billzify">
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#products">Products <span class="chev">▾</span></a></li>
+        <li><a class="nav-link" href="#solutions">Solutions <span class="chev">▾</span></a></li>
+        <li><a class="nav-link" href="#api">API</a></li>
+        <li><a class="nav-link" href="#docs">Docs</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li><a class="nav-link" href="#partners">Partners</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn btn-ghost">Sign in</a>
+        <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn btn-primary">Get API access →</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div data-reveal>
+        <span class="eyebrow">
+          <span class="pill">NEW</span>
+          v2.4 · Channel Manager API for PMS Companies
+        </span>
+
+        <h1 class="hero-title">
+          One API to power every <span class="underline"><span class="accent">OTA connection</span></span> your PMS will ever need.
+        </h1>
+
+        <p class="hero-sub">
+          <strong>Billzify Channel Manager API</strong> lets PMS companies plug into Airbnb, Booking.com, MakeMyTrip, Goibibo, Agoda, Expedia and Google Hotel Ads — sync availability, push rates, ingest reservations, and unify guest messaging through a single REST endpoint.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Request API key</a>
+          <a href="#docs" class="btn btn-ghost">Read the docs →</a>
+        </div>
+
+        <div class="meta-row">
+          <span><span class="dot"></span>API status: operational</span>
+          <span>99.99% uptime SLA</span>
+          <span>SOC 2 · ISO 27001</span>
+        </div>
+      </div>
+
+      <div data-reveal style="transition-delay:.15s">
+        <div class="code-card">
+          <div class="code-head">
+            <div class="code-tabs">
+              <span class="code-tab active">cURL</span>
+              <span class="code-tab">Node.js</span>
+              <span class="code-tab">Python</span>
+              <span class="code-tab">PHP</span>
+            </div>
+            <div class="code-dots"><span></span><span></span><span></span></div>
+          </div>
+<pre class="code"><span class="tk-comment"># Push availability + rates to all connected OTAs in one call</span>
+<span class="tk-fn">curl</span> <span class="tk-method">-X POST</span> https://api.billzify.com/v2/channel/inventory \
+  <span class="tk-method">-H</span> <span class="tk-str">"Authorization: Bearer $BILLZIFY_KEY"</span> \
+  <span class="tk-method">-H</span> <span class="tk-str">"Content-Type: application/json"</span> \
+  <span class="tk-method">-d</span> <span class="tk-str">'{
+    <span class="tk-key">"property_id"</span><span class="tk-punc">:</span> <span class="tk-str">"prop_84A2"</span><span class="tk-punc">,</span>
+    <span class="tk-key">"room_type_id"</span><span class="tk-punc">:</span> <span class="tk-str">"deluxe_king"</span><span class="tk-punc">,</span>
+    <span class="tk-key">"date_from"</span><span class="tk-punc">:</span> <span class="tk-str">"2026-05-10"</span><span class="tk-punc">,</span>
+    <span class="tk-key">"date_to"</span><span class="tk-punc">:</span> <span class="tk-str">"2026-05-31"</span><span class="tk-punc">,</span>
+    <span class="tk-key">"availability"</span><span class="tk-punc">:</span> <span class="tk-num">12</span><span class="tk-punc">,</span>
+    <span class="tk-key">"rate"</span><span class="tk-punc">:</span> <span class="tk-num">4499</span><span class="tk-punc">,</span>
+    <span class="tk-key">"channels"</span><span class="tk-punc">:</span> <span class="tk-punc">[</span><span class="tk-str">"airbnb"</span><span class="tk-punc">,</span> <span class="tk-str">"booking"</span><span class="tk-punc">,</span>
+                  <span class="tk-str">"mmt"</span><span class="tk-punc">,</span> <span class="tk-str">"goibibo"</span><span class="tk-punc">,</span> <span class="tk-str">"google"</span><span class="tk-punc">]</span>
+  }'</span>
+
+<span class="tk-comment"># → 200 OK · synced to 5 channels in 1.4s</span></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OTA STRIP ============================ -->
+<div class="ota-strip">
+  <div class="container">
+    <p class="ota-label">100+ OTAs · One Integration</p>
+    <div class="ota-grid">
+      <div class="ota-cell">Airbnb</div>
+      <div class="ota-cell">Booking.com</div>
+      <div class="ota-cell">MakeMyTrip</div>
+      <div class="ota-cell">Goibibo</div>
+      <div class="ota-cell">Agoda</div>
+      <div class="ota-cell">Expedia</div>
+      <div class="ota-cell">Google Hotel</div>
+      <div class="ota-cell">Hotels.com</div>
+      <div class="ota-cell">Trip.com</div>
+      <div class="ota-cell">Yatra</div>
+      <div class="ota-cell">EaseMyTrip</div>
+      <div class="ota-cell">Cleartrip</div>
+      <div class="ota-cell">Hostelworld</div>
+      <div class="ota-cell">+ 90 more</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ FEATURES ============================ -->
+<section id="features">
+  <div class="container">
+    <div class="sec-head" data-reveal>
+      <p class="sec-eyebrow">Capabilities</p>
+      <h2 class="sec-title">Everything a PMS needs to <span class="accent">distribute, sync & sell</span> — through one API.</h2>
+      <p class="sec-sub">Built specifically for PMS vendors who want to ship channel manager features to their hotel customers without building 100 OTA integrations.</p>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat" data-reveal>
+        <div class="feat-icon">📦</div>
+        <h3>Real-time availability sync</h3>
+        <p>Push room availability to every connected OTA in under 2 seconds. Stop overbookings with atomic inventory updates and pooled allocations.</p>
+        <span class="tag">POST /channel/inventory</span>
+      </div>
+      <div class="feat" data-reveal style="transition-delay:.05s">
+        <div class="feat-icon">💰</div>
+        <h3>Dynamic rate updates</h3>
+        <p>Update BAR, derived rates and rate plans across Airbnb, Booking.com, MMT, Goibibo and Google with a single call. Currency-aware and tax-inclusive.</p>
+        <span class="tag">PUT /channel/rates</span>
+      </div>
+      <div class="feat" data-reveal style="transition-delay:.1s">
+        <div class="feat-icon">📥</div>
+        <h3>Reservation delivery</h3>
+        <p>Receive new bookings, modifications and cancellations as normalized webhooks — no more parsing 12 different XML schemas.</p>
+        <span class="tag">Webhook · reservation.created</span>
+      </div>
+      <div class="feat" data-reveal>
+        <div class="feat-icon">💬</div>
+        <h3>Unified guest messaging</h3>
+        <p>One inbox API for Airbnb messages, Booking.com chat, MakeMyTrip and Goibibo communications. Send, receive, automate.</p>
+        <span class="tag">POST /messaging/threads</span>
+      </div>
+      <div class="feat" data-reveal style="transition-delay:.05s">
+        <div class="feat-icon">📣</div>
+        <h3>Promotions & deals</h3>
+        <p>Programmatic access to MakeMyTrip promotions, Goibibo deals, Booking Genius, Airbnb special offers and Google Hotel Ads campaigns.</p>
+        <span class="tag">POST /promotions</span>
+      </div>
+      <div class="feat" data-reveal style="transition-delay:.1s">
+        <div class="feat-icon">🌐</div>
+        <h3>Google Hotel Ads feed</h3>
+        <p>Native Google Hotel Ads support — push availability, rates and promotions directly to Google Search, Maps and Travel.</p>
+        <span class="tag">Feed · google.hotel</span>
+      </div>
+      <div class="feat" data-reveal>
+        <div class="feat-icon">🔁</div>
+        <h3>Two-way mapping engine</h3>
+        <p>Map your room types and rate plans to OTA-side codes once. We handle re-mapping, fallbacks and channel-specific quirks automatically.</p>
+        <span class="tag">GET /mappings</span>
+      </div>
+      <div class="feat" data-reveal style="transition-delay:.05s">
+        <div class="feat-icon">📊</div>
+        <h3>Reports & reconciliation</h3>
+        <p>Daily reservation reconciliation, payout reports, commission tracking and revenue analytics across all OTAs in one feed.</p>
+        <span class="tag">GET /reports/reconciliation</span>
+      </div>
+      <div class="feat" data-reveal style="transition-delay:.1s">
+        <div class="feat-icon">🔒</div>
+        <h3>Enterprise security</h3>
+        <p>OAuth 2.0, signed webhooks, IP allowlisting, audit logs and tenant-isolated data. SOC 2 Type II and ISO 27001 certified.</p>
+        <span class="tag">OAuth 2.0 · HMAC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ENDPOINTS ============================ -->
+<section id="api" style="background: linear-gradient(180deg, transparent, rgba(255,255,255,0.015));">
+  <div class="container">
+    <div class="sec-head" data-reveal>
+      <p class="sec-eyebrow">API Reference</p>
+      <h2 class="sec-title">A clean, predictable, <span class="accent">REST API</span>.</h2>
+      <p class="sec-sub">Resource-oriented endpoints, standard HTTP verbs, JSON request/response, and webhooks for events. Versioned and backwards-compatible.</p>
+    </div>
+
+    <div class="endpoint-wrap">
+      <div class="endpoint-list" data-reveal>
+        <div class="ep-item active">
+          <div class="method m-post">POST</div>
+          <div>
+            <div class="ep-path">/v2/channel/inventory</div>
+            <div class="ep-desc">Push availability across channels</div>
+          </div>
+        </div>
+        <div class="ep-item">
+          <div class="method m-put">PUT</div>
+          <div>
+            <div class="ep-path">/v2/channel/rates</div>
+            <div class="ep-desc">Update rate plans on all OTAs</div>
+          </div>
+        </div>
+        <div class="ep-item">
+          <div class="method m-get">GET</div>
+          <div>
+            <div class="ep-path">/v2/reservations</div>
+            <div class="ep-desc">List inbound bookings from OTAs</div>
+          </div>
+        </div>
+        <div class="ep-item">
+          <div class="method m-post">POST</div>
+          <div>
+            <div class="ep-path">/v2/messaging/send</div>
+            <div class="ep-desc">Send a message to an Airbnb / OTA guest</div>
+          </div>
+        </div>
+        <div class="ep-item">
+          <div class="method m-post">POST</div>
+          <div>
+            <div class="ep-path">/v2/promotions</div>
+            <div class="ep-desc">Launch a deal on MMT, Goibibo, Booking</div>
+          </div>
+        </div>
+        <div class="ep-item">
+          <div class="method m-get">GET</div>
+          <div>
+            <div class="ep-path">/v2/mappings</div>
+            <div class="ep-desc">Room/rate plan to OTA code mapping</div>
+          </div>
+        </div>
+        <div class="ep-item">
+          <div class="method m-del">DEL</div>
+          <div>
+            <div class="ep-path">/v2/channel/connection</div>
+            <div class="ep-desc">Disconnect a channel from a property</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="endpoint-detail" data-reveal style="transition-delay:.1s">
+        <div class="code-head">
+          <div class="code-tabs">
+            <span class="code-tab active">Request</span>
+            <span class="code-tab">Response</span>
+            <span class="code-tab">Webhooks</span>
+          </div>
+          <div style="font-family:var(--font-mono); font-size:11px; color:var(--text-dim);">200 · 1.42s</div>
+        </div>
+<pre class="code"><span class="tk-comment">// Send a guest message — same payload works for Airbnb,</span>
+<span class="tk-comment">// Booking.com, MakeMyTrip, Goibibo. Channel auto-resolved</span>
+<span class="tk-comment">// from reservation_id.</span>
+
+<span class="tk-fn">POST</span> /v2/messaging/send
+
+<span class="tk-punc">{</span>
+  <span class="tk-key">"reservation_id"</span><span class="tk-punc">:</span> <span class="tk-str">"res_AIRBNB_9F2K7"</span><span class="tk-punc">,</span>
+  <span class="tk-key">"channel"</span><span class="tk-punc">:</span> <span class="tk-str">"airbnb"</span><span class="tk-punc">,</span>
+  <span class="tk-key">"thread_id"</span><span class="tk-punc">:</span> <span class="tk-str">"thr_77c2"</span><span class="tk-punc">,</span>
+  <span class="tk-key">"message"</span><span class="tk-punc">:</span> <span class="tk-str">"Welcome! Your check-in code is 4421."</span><span class="tk-punc">,</span>
+  <span class="tk-key">"locale"</span><span class="tk-punc">:</span> <span class="tk-str">"en-IN"</span><span class="tk-punc">,</span>
+  <span class="tk-key">"attachments"</span><span class="tk-punc">:</span> <span class="tk-punc">[</span>
+    <span class="tk-punc">{</span> <span class="tk-key">"type"</span><span class="tk-punc">:</span> <span class="tk-str">"image"</span><span class="tk-punc">,</span>
+      <span class="tk-key">"url"</span><span class="tk-punc">:</span> <span class="tk-str">"https://cdn.../map.png"</span> <span class="tk-punc">}</span>
+  <span class="tk-punc">]</span>
+<span class="tk-punc">}</span>
+
+<span class="tk-comment">// → 200 OK</span>
+<span class="tk-comment">// { "id": "msg_01HZ...", "delivered_at": "2026-05-07T..." }</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STATS ============================ -->
+<section style="padding-top: 32px;">
+  <div class="container">
+    <div class="stats" data-reveal>
+      <div class="stat">
+        <div class="stat-num">100+</div>
+        <div class="stat-label">OTA channels supported globally</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">&lt; 2s</div>
+        <div class="stat-label">Average rate &amp; availability sync</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">99.99%</div>
+        <div class="stat-label">API uptime SLA</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">12M+</div>
+        <div class="stat-label">Reservations processed monthly</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HOW IT WORKS ============================ -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="sec-head" data-reveal>
+      <p class="sec-eyebrow">Integration</p>
+      <h2 class="sec-title">Live in <span class="accent">days</span>, not quarters.</h2>
+      <p class="sec-sub">Designed for PMS engineering teams. Sandbox keys instantly, production access in under a week.</p>
+    </div>
+
+    <div class="flow-grid">
+      <div class="step" data-reveal>
+        <div class="step-num">01</div>
+        <h4>Request API key</h4>
+        <p>Sign up as a PMS partner and instantly get sandbox credentials with mock OTA channels.</p>
+      </div>
+      <div class="step" data-reveal style="transition-delay:.05s">
+        <div class="step-num">02</div>
+        <h4>Map your data</h4>
+        <p>Map your PMS room types and rate plans to OTA-specific codes using our mapping API.</p>
+      </div>
+      <div class="step" data-reveal style="transition-delay:.1s">
+        <div class="step-num">03</div>
+        <h4>Connect channels</h4>
+        <p>Hotels onboard their existing OTA accounts via OAuth or guided XML/credential flow.</p>
+      </div>
+      <div class="step" data-reveal style="transition-delay:.15s">
+        <div class="step-num">04</div>
+        <h4>Go live</h4>
+        <p>Promote to production. Push inventory, rates and messages — we handle the rest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head" data-reveal style="margin-left:auto; margin-right:auto; text-align:center;">
+      <p class="sec-eyebrow">FAQ</p>
+      <h2 class="sec-title">Questions, <span class="accent">answered</span>.</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q">What is Billzify Channel Manager API? <span class="plus">+</span></div>
+        <div class="faq-a">Billzify Channel Manager API is a REST API designed for PMS companies to connect their systems with global OTAs like Airbnb, Booking.com, MakeMyTrip, Goibibo, Agoda, Expedia and Google Hotel Ads. It enables real-time availability sync, rate updates, reservation delivery and unified guest messaging — all behind one set of endpoints.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Which OTAs does Billzify Channel Manager API support? <span class="plus">+</span></div>
+        <div class="faq-a">Billzify supports 100+ OTAs including Airbnb, Booking.com, MakeMyTrip, Goibibo, Agoda, Expedia, Google Hotel Ads, Hotels.com, Trip.com, Yatra, EaseMyTrip, Cleartrip, Hostelworld, and many regional channels.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can PMS companies manage Airbnb messages through Billzify API? <span class="plus">+</span></div>
+        <div class="faq-a">Yes. Billzify provides a unified guest messaging API that lets PMS companies send and receive Airbnb messages, Booking.com chat, MakeMyTrip and Goibibo communications from a single endpoint — including attachments, locales and templated replies.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does Billzify support Google Hotel Ads promotions? <span class="plus">+</span></div>
+        <div class="faq-a">Yes. The API supports Google Hotel Ads promotions, rate plans and availability feeds, allowing properties to be discovered through Google Search, Maps and Google Travel.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How fast is rate and availability sync? <span class="plus">+</span></div>
+        <div class="faq-a">Billzify Channel Manager API delivers real-time push updates with typical sync latency under 2 seconds across all connected OTAs. We also support pooled inventory and atomic updates to prevent overbookings.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is the API priced for PMS partners? <span class="plus">+</span></div>
+        <div class="faq-a">Billzify offers volume-based pricing for PMS partners with a free sandbox tier. Production pricing scales by number of properties and active channels. Contact our partner team for a tailored quote.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND ============================ -->
+<section id="contact">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>Ship channel manager to your hotels — <em style="font-style:italic;">this quarter.</em></h2>
+      <p>Join PMS companies powering OTA distribution with Billzify. Get sandbox access in 60 seconds.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn btn-primary">Get API access →</a>
+        <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn btn-ghost">Talk to sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="logo-box" style="margin-bottom: 18px;">LOGO HERE</div>
+        <p style="color: var(--text-muted); font-size: 14px; max-width: 36ch;">Billzify is the channel manager API for PMS companies — connect your hospitality software to every OTA in the world.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#api">Channel Manager API</a></li>
+          <li><a href="#messaging">Guest Messaging API</a></li>
+          <li><a href="#promotions">Promotions API</a></li>
+          <li><a href="#google">Google Hotel Ads</a></li>
+          <li><a href="#webhooks">Webhooks</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Channels</h5>
+        <ul>
+          <li><a href="#airbnb">Airbnb</a></li>
+          <li><a href="#booking">Booking.com</a></li>
+          <li><a href="#mmt">MakeMyTrip</a></li>
+          <li><a href="#goibibo">Goibibo</a></li>
+          <li><a href="#agoda">Agoda &amp; Expedia</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Developers</h5>
+        <ul>
+          <li><a href="#docs">API Documentation</a></li>
+          <li><a href="#sdks">SDKs &amp; Libraries</a></li>
+          <li><a href="#status">API Status</a></li>
+          <li><a href="#changelog">Changelog</a></li>
+          <li><a href="#postman">Postman Collection</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About Billzify</a></li>
+          <li><a href="#partners">PMS Partners</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#careers">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Billzify Technologies. — All rights reserved.</span>
+      <span style="display:flex; gap:18px;">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#dpa">DPA</a>
+        <a href="#sitemap">Sitemap</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  // FAQ toggle
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => item.classList.toggle('open'));
+  });
+
+  // Endpoint list active state
+  document.querySelectorAll('.ep-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.ep-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
