@@ -34,6 +34,7 @@ urlpatterns = [
          name='django.contrib.sitemaps.views.sitemap'),
 
     path('robots.txt', RobotsTxtView.as_view(), name='robots'),
+    path('delete-account/', views.delete_account_view, name='delete_account_view'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

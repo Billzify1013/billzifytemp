@@ -96,3 +96,6 @@ def cmapi(request):
 class RobotsTxtView(TemplateView):
     template_name = "robots.txt"
     content_type = "text/plain"
+
+def delete_account_view(request):
+    return render(request, 'delete_account.html')
