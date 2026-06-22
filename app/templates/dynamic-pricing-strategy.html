@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,12 +135,14 @@ footer a{color:var(--gold-light);text-decoration:none}
 <div class="progress-bar" id="progress"></div>
 
 <nav>
-  <a href="https://billzify.com" class="logo">Bill<span>zify</span></a>
+  <a href="https://billzify.com" class="logo">
+    <img src="{% static 'img/ilify1.png' %}" alt="Billzify" height="40" style="display:block;">
+  </a>
   <div class="nav-links">
     <a href="https://billzify.com" class="nav-link">Home</a>
     <a href="https://billzify.com/blog" class="nav-link">Blog</a>
     <a href="https://billzify.com/#pricing" class="nav-link">Pricing</a>
-    <a href="https://billzify.com/#demo" class="nav-link nav-cta">Free Demo</a>
+    <a href="https://wa.me/message/BWCMUEL3U54RF1" class="nav-link nav-cta">Free Demo</a>
   </div>
 </nav>
 

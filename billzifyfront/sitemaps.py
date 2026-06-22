@@ -7,12 +7,15 @@ class StaticViewSitemap(Sitemap):
 
     def items(self):
         return [
-            'index',           # index page
-            'channelmanager', # channel manager page
-            'PMS',            # PMS page
-            'BookingEngine', # booking engine page
-            'price',          # pricing page
-            'about',          # about page
+            'index',
+            'channelmanager',
+            'PMS',
+            'BookingEngine',
+            'price',
+            'about',
+            'blog',
+            'cmapi',        # channel-manager-api page
+            'blogcmguide',  # blog/channel-manager-guide page
         ]
 
     def location(self, item):
