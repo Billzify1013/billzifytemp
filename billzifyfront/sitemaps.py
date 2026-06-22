@@ -16,6 +16,7 @@ class StaticViewSitemap(Sitemap):
             'blog',
             'cmapi',        # channel-manager-api page
             'blogcmguide',  # blog/channel-manager-guide page
+            'bloggoogleranking',
         ]
 
     def location(self, item):

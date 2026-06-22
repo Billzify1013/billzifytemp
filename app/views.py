@@ -99,3 +99,6 @@ class RobotsTxtView(TemplateView):
 
 def delete_account_view(request):
     return render(request, 'delete_account.html')
+
+def bloggoogleranking(request):
+    return render(request, 'hotel-google-ranking.html')
