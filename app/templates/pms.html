@@ -24,6 +24,73 @@
 <!-- OG IMAGE ABSOLUTE URL KARO -->
 <meta property="og:image" content="https://www.billzify.com/static/img/abimg.png">
 
+<!-- ============================================================ -->
+<!-- SEO: Structured Data (JSON-LD) — invisible to users, helps   -->
+<!-- Google show rich results (FAQ dropdowns) in search results.  -->
+<!-- ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Billzify PMS",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, Android, iOS",
+  "description": "Billzify is a cloud-based hotel Property Management System for front desk, billing, housekeeping, OTA sync and reporting, used by 225+ hotels across India.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Billzify",
+    "url": "https://www.billzify.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a hotel Property Management System (PMS)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A hotel PMS is software that manages front desk operations, reservations, billing, housekeeping, and reporting from one cloud-based dashboard, replacing manual registers and spreadsheets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Billzify PMS work with a channel manager?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Billzify PMS integrates with Billzify's channel manager to sync rates and availability in real time across 100+ OTAs like Booking.com, MakeMyTrip, Airbnb, Agoda, and Expedia, preventing overbookings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Billzify PMS suitable for small hotels and homestays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Billzify is used by hotels, resorts, vacation rentals, serviced apartments, hostels, and guest houses of all sizes, from 5-room properties to multi-property chains, with over 225 hotels already using the platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need technical skills to use Billzify PMS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Billzify is designed with an easy-to-use interface that requires no technical expertise, with fast onboarding and step-by-step guidance for hotel staff."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Billzify PMS accept online payments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Billzify integrates with popular payment gateways so guests can pay via credit cards, UPI, net banking, and digital wallets securely."
+      }
+    }
+  ]
+}
+</script>
 
 
     <!-- Header Start -->
@@ -54,7 +121,8 @@
 
 
 <!-- About Start -->
-<div class="container-xxl py-6 "  style="background: #EFEFF6">
+ <div class=""  style="background: #EFEFF6">
+<div class="container-xxl py-6 "  >
     <div class="container">
         <div class="row g-6">
             <div class="col-lg-12 " >
@@ -71,7 +139,7 @@
             
         </div>
     </div>
-</div>
+</div></div>
 <!-- About End -->
 
 
@@ -142,7 +210,8 @@
 
 
 <!-- About Start -->
-<div class="container-xxl py-5 "  style="background: #EFEFF6">
+ <div class=""  style="background: #EFEFF6">
+<div class="container-xxl py-5 "  >
     <div class="container">
         <div class="row g-6">
             <div class="col-lg-12 " >
@@ -168,7 +237,7 @@
             
         </div>
     </div>
-</div>
+</div></div>
 <!-- About End -->
 
 <!-- About Start -->
@@ -253,6 +322,57 @@
 
     
 </div></div>
+
+<!-- ============================================================ -->
+<!-- NEW: FAQ Section — same heading/paragraph pattern used in    -->
+<!-- "Key Benefits" sections above. Matches the FAQPage schema    -->
+<!-- added in the <head> for Google rich-result eligibility.      -->
+<!-- ============================================================ -->
+<div class="container-xxl py-5" id="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="row g-6 mt-5">
+            <div class="col-lg-6">
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">What is a hotel Property Management System (PMS)?</h5>
+                </div>
+                <p class="mb-4">A hotel PMS is software that manages front desk operations, reservations, billing, housekeeping, and reporting from one cloud-based dashboard, replacing manual registers and spreadsheets.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Does Billzify PMS work with a channel manager?</h5>
+                </div>
+                <p class="mb-4">Yes. Billzify PMS integrates with our <a href="{% url 'channelmanager' %}">channel manager</a> to sync rates and availability in real time across 100+ OTAs like Booking.com, MakeMyTrip, Airbnb, Agoda, and Expedia.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Is Billzify PMS suitable for small hotels and homestays?</h5>
+                </div>
+                <p class="mb-4">Yes. Billzify is used by hotels, resorts, vacation rentals, serviced apartments, hostels, and guest houses of all sizes — from 5-room properties to multi-property chains — with over 225 hotels already on the platform.</p>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Do I need technical skills to use Billzify PMS?</h5>
+                </div>
+                <p class="mb-4">No. Billzify is designed with an easy-to-use interface that requires no technical expertise, with fast onboarding and step-by-step guidance for hotel staff.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Can Billzify PMS accept online payments?</h5>
+                </div>
+                <p class="mb-4">Yes. Billzify integrates with popular payment gateways so guests can pay via credit cards, UPI, net banking, and digital wallets securely.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">How much does Billzify PMS cost?</h5>
+                </div>
+                <p class="mb-4">Pricing depends on your property size and the features you need. Visit our <a href="{% url 'price' %}">pricing page</a> for full details, or get a free demo to discuss your requirements.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ End -->
 
     {% comment %} <div class="container">
         

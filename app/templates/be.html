@@ -17,8 +17,73 @@
 <meta property="og:url" content="https://www.billzify.com/BookingEngine/">
 <meta property="og:image" content="https://www.billzify.com/static/img/abimg.png">
 
-
-
+<!-- ============================================================ -->
+<!-- SEO: Structured Data (JSON-LD) — invisible to users, helps   -->
+<!-- Google show rich results (FAQ dropdowns) in search results.  -->
+<!-- ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Billzify Booking Engine",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, Android, iOS",
+  "description": "Billzify's commission-free hotel booking engine lets guests book directly on a hotel's own website, with real-time availability synced to Billzify PMS and Channel Manager.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Billzify",
+    "url": "https://www.billzify.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a hotel booking engine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A hotel booking engine is a tool embedded on your hotel's own website that lets guests check availability and book rooms directly, without going through an OTA like Booking.com or MakeMyTrip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Billzify's booking engine charge commission?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Direct bookings made through Billzify's booking engine carry zero OTA commission, so hotels keep 100% of their direct booking revenue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the booking engine sync with my PMS and channel manager?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Billzify's booking engine syncs in real time with Billzify PMS and Channel Manager, so rates and availability shown to website visitors are always accurate and OTA inventory stays in sync."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add the booking engine to my existing hotel website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Billzify's booking engine is designed for easy integration with your existing hotel website and can be customized to match your hotel's branding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Billzify's booking engine mobile-friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Since over 70% of travelers book on mobile, Billzify's booking engine is built mobile-first and works smoothly on phones, tablets, and desktops."
+      }
+    }
+  ]
+}
+</script>
 
 
     <!-- Header Start -->
@@ -31,7 +96,7 @@
                     >Billzify</h3> -->
                     {% comment %} <img class="img-fluid" src="{% static 'img/3.png'%}" style="height:90px" alt=""> {% endcomment %}
                     <h1 class="mt-0 mb-3 " style="font-family:'Poppins', sans-serif;color:#1f2937;">Billzify AI-Powered Hotel Booking Engine – Increase Direct Bookings & Maximize Revenue</h1>
-                    <p class=" pe-3 me-3  mb-0" style="font-weight: 500;color: #4b5563">Boost your hotel's direct reservations with Billzify’s commission-free booking engine. Seamlessly integrate with your website, sync with OTAs, and offer a mobile-friendly, secure, and automated booking experience. Optimize conversions, reduce OTA dependency, and maximize profits effortlessly!
+                    <p class=" pe-3 me-3  mb-0" style="font-weight: 500;color: #4b5563">Boost your hotel's direct reservations with Billzify’s commission-free booking engine. Seamlessly integrate with your website, sync with OTAs, get your rates listed directly on Google Search & Maps, and offer a mobile-friendly, secure, and automated booking experience. Optimize conversions, reduce OTA dependency, and maximize profits effortlessly!
 
                     </p>
                     
@@ -41,7 +106,7 @@
                 <div class="col-lg-5">
                     {% comment %} <img class="img-fluid mt-2" src="{% static 'img/5312964.jpg'%}" alt=""> {% endcomment %}
                  <center> <img class="img-fluid " style="border-radius:12px;rgba(0, 0, 0, 0.04) 0px 3px 5px;height:500px" 
-                     src="{% static 'img/brsvg.svg'%}" alt=""></center>
+                     src="{% static 'img/billzify-google-booking-engine.png'%}" alt=""></center>
                      {% comment %} src="{% static 'img/chanel.png'%}" alt=""></center> {% endcomment %}
                 </div>
             </div>
@@ -51,6 +116,7 @@
 
 
 <!-- About Start -->
+ <div  style="background: #EFEFF6">
 <div class="container-xxl py-6 " id="about" style="background: #EFEFF6">
     <div class="container">
         <div class="row g-6">
@@ -70,7 +136,7 @@
             
         </div>
     </div>
-</div>
+</div></div>
 <!-- About End -->
 
 
@@ -142,6 +208,7 @@
 
 
 <!-- About Start -->
+ <div  style="background: #EFEFF6">
 <div class="container-xxl py-5 "  style="background: #EFEFF6">
     <div class="container">
         <div class="row g-6">
@@ -171,7 +238,7 @@
             
         </div>
     </div>
-</div>
+</div></div>
 <!-- About End -->
 
 <!-- About Start -->
@@ -256,6 +323,100 @@
 
     
 </div></div>
+
+<!-- ============================================================ -->
+<!-- NEW: Google Hotel Ads Integration Section                     -->
+<!-- IMPORTANT: Upload these 2 images to your static/img/ folder  -->
+<!-- with these EXACT filenames, or update the src paths below:   -->
+<!--   1. billzify-google-booking-engine.png                      -->
+<!--   2. google-compare-illustration.png                         -->
+<!-- (Same images already used on the Channel Manager page)       -->
+<!-- ============================================================ -->
+<div class="container-xxl py-6" id="google-hotel-ads">
+    <div class="container">
+        <div class="row g-6 align-items-center">
+            <div class="col-lg-6">
+                <center>
+                    <img class="img-fluid" style="border-radius:12px;rgba(0, 0, 0, 0.04) 0px 3px 5px;max-width:380px;"
+                         src="{% static 'img/google-compare-illustration.png'' %}" alt="Billzify rates shown on Google Hotel search results">
+                </center>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="lh-base mb-3">Your Booking Engine, Visible Directly on Google</h3>
+                <p style="font-weight: 500;color: #4b5563">
+                    Billzify connects your hotel's rates and availability directly to Google Hotel Ads and Free Booking Links via Google's official API — helping your property get discovered when travelers search on Google.
+                </p>
+                <p style="font-weight: 500;color: #4b5563">
+                    Direct Google Hotel Ads integration — get your rates shown to travelers searching on Google Search & Maps, right alongside Booking.com, MakeMyTrip, and Agoda.
+                </p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Your rates appear next to major OTAs on Google</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Real-time price & availability sync</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Drive zero-commission direct bookings straight from Google</p>
+                <a class="btn btn-primary py-3 px-5 mt-3" href="https://wa.me/message/BWCMUEL3U54RF1">Get A Free Demo</a>
+            </div>
+        </div>
+        <!-- <div class="row mt-5">
+            <div class="col-lg-12">
+                <center>
+                    <img class="img-fluid" style="max-width:600px;"
+                         src="{% static 'img/google-compare-illustration.png' %}" alt="Compare hotel rates on Google with Billzify">
+                </center>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- Google Hotel Ads Section End -->
+
+<!-- ============================================================ -->
+<!-- NEW: FAQ Section — same heading/paragraph pattern used in    -->
+<!-- "Key Benefits" sections above. Matches the FAQPage schema    -->
+<!-- added in the <head> for Google rich-result eligibility.      -->
+<!-- ============================================================ -->
+<div class="container-xxl py-5" id="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="row g-6 mt-5">
+            <div class="col-lg-6">
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">What is a hotel booking engine?</h5>
+                </div>
+                <p class="mb-4">A hotel booking engine is a tool embedded on your hotel's own website that lets guests check availability and book rooms directly, without going through an OTA like Booking.com or MakeMyTrip.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Does Billzify's booking engine charge commission?</h5>
+                </div>
+                <p class="mb-4">No. Direct bookings made through Billzify's booking engine carry zero OTA commission, so you keep 100% of your direct booking revenue.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Does it sync with my PMS and channel manager?</h5>
+                </div>
+                <p class="mb-4">Yes. The booking engine syncs in real time with Billzify <a href="{% url 'PMS' %}">PMS</a> and <a href="{% url 'channelmanager' %}">Channel Manager</a>, so rates and availability shown to visitors are always accurate.</p>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Can I add it to my existing hotel website?</h5>
+                </div>
+                <p class="mb-4">Yes. Billzify's booking engine is designed for easy integration with your existing website and can be customized to match your hotel's branding.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Is the booking engine mobile-friendly?</h5>
+                </div>
+                <p class="mb-4">Yes. Since over 70% of travelers book on mobile, Billzify's booking engine is built mobile-first and works smoothly on phones, tablets, and desktops.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Is the booking engine included with Billzify PMS?</h5>
+                </div>
+                <p class="mb-4">Yes, the booking engine works alongside Billzify PMS as part of your setup. <a href="https://wa.me/message/BWCMUEL3U54RF1">Get in touch</a> for full details on what's included.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ End -->
 
    
 

@@ -33,8 +33,6 @@ nav a.nav-link:hover{color:var(--gold-light)}
 .tag-seo{background:rgba(20,100,180,0.1);color:#0E3A6E}
 .read-time{font-size:0.8rem;color:var(--text-light)}
 .post-meta{display:flex;align-items:center;gap:0.8rem;flex-wrap:wrap;margin-bottom:0.8rem}
-
-/* HERO */
 .blog-hero{background:var(--navy);padding:5rem 5% 4rem;text-align:center;position:relative;overflow:hidden}
 .blog-hero::before{content:'';position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(201,147,42,0.12) 0%,transparent 70%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
 .hero-badge{display:inline-block;background:rgba(201,147,42,0.15);color:var(--gold-light);border:1px solid rgba(201,147,42,0.3);font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:0.4rem 1rem;border-radius:50px;margin-bottom:1.5rem}
@@ -46,19 +44,13 @@ nav a.nav-link:hover{color:var(--gold-light)}
 .search-wrap input::placeholder{color:rgba(255,255,255,0.4)}
 .search-wrap input:focus{border-color:var(--gold);background:rgba(255,255,255,0.12)}
 .search-icon{position:absolute;left:1.1rem;top:50%;transform:translateY(-50%);color:rgba(255,255,255,0.5)}
-
-/* CATEGORIES */
 .categories-bar{background:var(--white);border-bottom:1px solid var(--border);padding:0 5%;display:flex;gap:0.3rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .categories-bar::-webkit-scrollbar{display:none}
 .cat-btn{flex-shrink:0;padding:1rem 1.1rem;border:none;background:none;font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:500;color:var(--text-muted);cursor:pointer;border-bottom:2.5px solid transparent;transition:all 0.2s;white-space:nowrap}
 .cat-btn:hover{color:var(--navy)}
 .cat-btn.active{color:var(--navy);border-bottom-color:var(--gold);font-weight:600}
-
-/* MAIN */
 .main-wrap{max-width:1200px;margin:0 auto;padding:3rem 5%}
 .section-label{font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
-
-/* FEATURED */
 .featured-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;margin-bottom:4rem;box-shadow:var(--card-shadow);transition:transform 0.25s,box-shadow 0.25s;text-decoration:none;color:inherit}
 .featured-card:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(11,31,58,0.12)}
 .featured-img{background:linear-gradient(135deg,var(--navy) 0%,#1a3a6e 100%);min-height:320px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -71,23 +63,15 @@ nav a.nav-link:hover{color:var(--gold-light)}
 .read-btn:hover{background:var(--gold);transform:scale(1.02)}
 .arrow{transition:transform 0.2s}
 .read-btn:hover .arrow{transform:translateX(4px)}
-
-/* BLOG GRID */
 .grid-section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:0.5rem}
 .grid-section-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--text)}
-.see-all{font-size:0.85rem;color:var(--gold);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:0.3rem;transition:gap 0.2s}
-.see-all:hover{gap:0.6rem}
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-bottom:4rem}
 .blog-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--card-shadow);transition:transform 0.25s,box-shadow 0.25s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
 .blog-card:hover{transform:translateY(-4px);box-shadow:0 10px 35px rgba(11,31,58,0.11)}
 .card-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden}
 .card-img.navy{background:linear-gradient(135deg,#0B1F3A 0%,#1a3560 100%)}
 .card-img.gold{background:linear-gradient(135deg,#7A5010 0%,#B8801A 100%)}
-.card-img.teal{background:linear-gradient(135deg,#0A4A4A 0%,#0D7070 100%)}
-.card-img.purple{background:linear-gradient(135deg,#2A1060 0%,#4A2A9A 100%)}
 .card-img.green{background:linear-gradient(135deg,#0A3A20 0%,#1A6035 100%)}
-.card-img.red{background:linear-gradient(135deg,#4A0A0A 0%,#8B1A1A 100%)}
-.card-img.blue{background:linear-gradient(135deg,#0A2A5A 0%,#1A4A9A 100%)}
 .card-body{padding:1.25rem;flex:1;display:flex;flex-direction:column}
 .card-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;line-height:1.35;color:var(--text);margin-bottom:0.6rem;flex:1}
 .card-excerpt{font-size:0.85rem;color:var(--text-muted);line-height:1.6;margin-bottom:1rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
@@ -97,7 +81,15 @@ nav a.nav-link:hover{color:var(--gold-light)}
 .author-name{font-size:0.78rem;font-weight:500;color:var(--text-muted)}
 .card-date{font-size:0.75rem;color:var(--text-light)}
 
-/* TWO COL */
+/* COMING SOON SECTION */
+.coming-soon-section{margin-bottom:4rem}
+.coming-soon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:1.2rem}
+.coming-card{background:var(--white);border-radius:var(--radius);border:1px dashed rgba(11,31,58,0.15);padding:1.3rem;display:flex;gap:1rem;align-items:flex-start;opacity:0.7}
+.coming-icon{width:40px;height:40px;border-radius:8px;background:var(--cream-dark);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.coming-content h4{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.3rem;line-height:1.35}
+.coming-badge{display:inline-block;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--gold);background:rgba(201,147,42,0.1);padding:0.15rem 0.5rem;border-radius:4px}
+
+.sidebar{position:sticky;top:88px}
 .two-col{display:grid;grid-template-columns:1fr 340px;gap:3rem;margin-bottom:4rem;align-items:start}
 .list-posts{display:flex;flex-direction:column;gap:1.2rem}
 .list-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:1.2rem 1.4rem;display:flex;gap:1.2rem;align-items:flex-start;box-shadow:var(--card-shadow);transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;color:inherit}
@@ -106,9 +98,6 @@ nav a.nav-link:hover{color:var(--gold-light)}
 .list-card.top .list-num{background:rgba(201,147,42,0.15);color:var(--gold)}
 .list-content h3{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;color:var(--text);margin-bottom:0.3rem;line-height:1.35}
 .list-content p{font-size:0.82rem;color:var(--text-muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-
-/* SIDEBAR */
-.sidebar{position:sticky;top:88px}
 .sidebar-widget{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:1.5rem;margin-bottom:1.5rem;box-shadow:var(--card-shadow)}
 .widget-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:1rem;padding-bottom:0.7rem;border-bottom:1px solid var(--border)}
 .newsletter-widget{background:var(--navy);border-color:var(--navy)}
@@ -122,13 +111,11 @@ nav a.nav-link:hover{color:var(--gold-light)}
 .topic-chip{padding:0.35rem 0.9rem;border-radius:50px;border:1.5px solid var(--border);font-size:0.8rem;font-weight:500;color:var(--text-muted);cursor:pointer;transition:all 0.2s;background:none;font-family:'DM Sans',sans-serif}
 .topic-chip:hover{border-color:var(--navy);color:var(--navy);background:var(--cream)}
 .recent-list{display:flex;flex-direction:column;gap:0.9rem}
-.recent-item{display:flex;gap:0.8rem;align-items:flex-start;text-decoration:none;cursor:pointer}
+.recent-item{display:flex;gap:0.8rem;align-items:flex-start;text-decoration:none}
 .recent-thumb{width:52px;height:52px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;background:var(--cream-dark)}
 .recent-item h4{font-size:0.83rem;font-weight:600;color:var(--text);line-height:1.35;margin-bottom:0.2rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;transition:color 0.2s}
 .recent-item:hover h4{color:var(--gold)}
 .recent-date{font-size:0.74rem;color:var(--text-light)}
-
-/* CTA */
 .cta-banner{background:linear-gradient(135deg,var(--navy) 0%,#1a3560 100%);border-radius:var(--radius-lg);padding:3.5rem 4%;text-align:center;margin-bottom:4rem;position:relative;overflow:hidden}
 .cta-banner::before{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(201,147,42,0.15) 0%,transparent 70%);top:-100px;right:-80px;pointer-events:none}
 .cta-banner h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);margin-bottom:0.8rem}
@@ -138,29 +125,17 @@ nav a.nav-link:hover{color:var(--gold-light)}
 .btn-primary:hover{background:var(--gold-light);transform:scale(1.03)}
 .btn-ghost{background:rgba(255,255,255,0.08);color:var(--white);padding:0.8rem 2rem;border-radius:50px;font-weight:500;text-decoration:none;font-size:0.9rem;border:1px solid rgba(255,255,255,0.2);transition:background 0.2s}
 .btn-ghost:hover{background:rgba(255,255,255,0.15)}
-
 footer{background:var(--navy);padding:2.5rem 5%;text-align:center}
 footer p{color:rgba(255,255,255,0.4);font-size:0.82rem}
 footer a{color:var(--gold-light);text-decoration:none}
 .footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
 .footer-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.85rem;transition:color 0.2s}
 .footer-links a:hover{color:var(--gold-light)}
-
 @media(max-width:900px){.featured-card{grid-template-columns:1fr}.featured-img{min-height:200px}.two-col{grid-template-columns:1fr}.sidebar{position:static}}
-@media(max-width:600px){nav{padding:0 4%}.nav-links a:not(.nav-cta){display:none}.blog-hero{padding:3.5rem 4% 3rem}.main-wrap{padding:2rem 4%}.blog-grid{grid-template-columns:1fr}.featured-content{padding:1.5rem}.featured-content h2{font-size:1.3rem}}
+@media(max-width:600px){nav{padding:0 4%}.nav-links a:not(.nav-cta){display:none}.blog-hero{padding:3.5rem 4% 3rem}.main-wrap{padding:2rem 4%}.blog-grid{grid-template-columns:1fr}.featured-content{padding:1.5rem}.featured-content h2{font-size:1.3rem}.coming-soon-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
-<!-- <nav>
-  <a href="https://billzify.com" class="logo">Bill<span>zify</span></a>
-  <div class="nav-links">
-    <a href="https://billzify.com" class="nav-link">Home</a>
-    <a href="https://billzify.com/blog" class="nav-link">Blog</a>
-    <a href="https://billzify.com/#pricing" class="nav-link">Pricing</a>
-    <a href="https://wa.me/message/BWCMUEL3U54RF1" class="nav-link nav-cta">Free Demo</a>
-  </div>
-</nav> -->
 
 <nav>
   <a href="https://billzify.com" class="logo">
@@ -173,7 +148,6 @@ footer a{color:var(--gold-light);text-decoration:none}
     <a href="https://wa.me/message/BWCMUEL3U54RF1" class="nav-link nav-cta">Free Demo</a>
   </div>
 </nav>
-
 
 <section class="blog-hero">
   <div class="hero-badge">✦ Hotel Insights & Tips</div>
@@ -202,18 +176,18 @@ footer a{color:var(--gold-light);text-decoration:none}
     <div class="featured-img"><div class="featured-img-icon">🏨</div></div>
     <div class="featured-content">
       <div class="post-meta">
-        <span class="tag tag-revenue">Revenue</span>
+        <span class="tag tag-ota">OTA Management</span>
         <span class="read-time">⏱ 8 min read</span>
       </div>
-      <h2>How to Double Your Hotel Revenue in 90 Days Using a Channel Manager</h2>
-      <p>Indian hoteliers are losing ₹40,000–₹2L per month due to manual OTA management. Learn how Billzify's channel manager automatically syncs your rates, prevents double bookings, and fills empty rooms across all platforms.</p>
+      <h2>How to Connect Your Hotel to MakeMyTrip, Booking.com & Airbnb — Without Double Bookings</h2>
+      <p>Indian hoteliers managing OTAs manually lose ₹40,000 to ₹2 lakh every month from double bookings and missed reservations. A channel manager solves all of this. Here's the complete guide.</p>
       <span class="read-btn">Read Full Article <span class="arrow">→</span></span>
     </div>
   </a>
 
   <div class="grid-section-header">
     <h2>Latest Articles</h2>
-    <a href="#" class="see-all">View all →</a>
+    <span style="font-size:0.82rem;color:var(--text-light)">3 articles published</span>
   </div>
 
   <div class="blog-grid" id="blogGrid">
@@ -221,9 +195,9 @@ footer a{color:var(--gold-light);text-decoration:none}
     <a href="https://billzify.com/blog/channel-manager-guide" class="blog-card" data-cat="ota">
       <div class="card-img navy">🔗</div>
       <div class="card-body">
-        <div class="post-meta"><span class="tag tag-ota">OTA</span><span class="read-time">⏱ 6 min</span></div>
+        <div class="post-meta"><span class="tag tag-ota">OTA</span><span class="read-time">⏱ 8 min</span></div>
         <h3 class="card-title">How to Connect Your Hotel to MakeMyTrip, Booking.com & Airbnb Without Overbooking</h3>
-        <p class="card-excerpt">Managing multiple OTAs manually is the #1 cause of double bookings for small hotels. Here's the complete guide to seamless OTA integration using a channel manager in India.</p>
+        <p class="card-excerpt">Managing multiple OTAs manually is the #1 cause of double bookings for small hotels. Complete guide to seamless OTA integration using a channel manager in India.</p>
         <div class="card-footer">
           <div class="author-mini"><div class="author-avatar">RK</div><span class="author-name">Rajesh Kumar</span></div>
           <span class="card-date">Apr 20, 2025</span>
@@ -235,8 +209,8 @@ footer a{color:var(--gold-light);text-decoration:none}
       <div class="card-img gold">💰</div>
       <div class="card-body">
         <div class="post-meta"><span class="tag tag-revenue">Revenue</span><span class="read-time">⏱ 7 min</span></div>
-        <h3 class="card-title">Dynamic Pricing Strategy: Charge More During Peak Season Without Losing Guests</h3>
-        <p class="card-excerpt">Hotels using dynamic pricing earn 23% more revenue. Learn how to set seasonal rates, weekend pricing, and demand-based adjustments using Billzify's AI pricing tool.</p>
+        <h3 class="card-title">Dynamic Pricing for Indian Hotels: How to Earn 23% More Revenue This Season</h3>
+        <p class="card-excerpt">Most Indian hotel owners set their room rate once and forget it. Top hotels adjust prices daily — and earn thousands more per month without adding a single room.</p>
         <div class="card-footer">
           <div class="author-mini"><div class="author-avatar">SP</div><span class="author-name">Sneha Patel</span></div>
           <span class="card-date">Apr 15, 2025</span>
@@ -245,122 +219,97 @@ footer a{color:var(--gold-light);text-decoration:none}
     </a>
 
     <a href="https://billzify.com/blog/hotel-google-ranking" class="blog-card" data-cat="seo">
-      <div class="card-img red">📈</div>
+      <div class="card-img green">📈</div>
       <div class="card-body">
         <div class="post-meta"><span class="tag tag-seo">Digital Marketing</span><span class="read-time">⏱ 8 min</span></div>
         <h3 class="card-title">How to Rank Your Hotel on Google Search Without Spending on Ads</h3>
-        <p class="card-excerpt">Learn local SEO strategies specifically for Indian hotels — from Google My Business optimization to appearing for "hotels near me" searches in your city for free.</p>
+        <p class="card-excerpt">Hotels on Google's first page get direct bookings with zero OTA commission. Learn local SEO, Google Business Profile, and review strategies for Indian hotels.</p>
         <div class="card-footer">
           <div class="author-mini"><div class="author-avatar">KS</div><span class="author-name">Karan Shah</span></div>
-          <span class="card-date">Mar 22, 2025</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://billzify.com/blog/channel-manager-guide" class="blog-card" data-cat="tips">
-      <div class="card-img teal">📋</div>
-      <div class="card-body">
-        <div class="post-meta"><span class="tag tag-tips">Management</span><span class="read-time">⏱ 5 min</span></div>
-        <h3 class="card-title">10 Hotel Management Mistakes That Are Costing You Guests Every Month</h3>
-        <p class="card-excerpt">From slow check-ins to inconsistent room rates across OTAs — these common mistakes drive guests away and hurt your reviews on TripAdvisor and Google.</p>
-        <div class="card-footer">
-          <div class="author-mini"><div class="author-avatar">AM</div><span class="author-name">Amit Mehta</span></div>
-          <span class="card-date">Apr 10, 2025</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://billzify.com/blog/dynamic-pricing-strategy" class="blog-card" data-cat="tech">
-      <div class="card-img purple">⚙️</div>
-      <div class="card-body">
-        <div class="post-meta"><span class="tag tag-tech">Technology</span><span class="read-time">⏱ 9 min</span></div>
-        <h3 class="card-title">PMS vs Channel Manager vs Booking Engine — What Does Your Hotel Actually Need?</h3>
-        <p class="card-excerpt">Confused about hotel software? We break down the exact differences and which combination is right for your property size and budget in India.</p>
-        <div class="card-footer">
-          <div class="author-mini"><div class="author-avatar">VR</div><span class="author-name">Vikram Rao</span></div>
-          <span class="card-date">Apr 5, 2025</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://billzify.com/blog/hotel-google-ranking" class="blog-card" data-cat="guest">
-      <div class="card-img green">⭐</div>
-      <div class="card-body">
-        <div class="post-meta"><span class="tag tag-guest">Guest Experience</span><span class="read-time">⏱ 6 min</span></div>
-        <h3 class="card-title">How to Get More 5-Star Reviews on Google & TripAdvisor: A Hotel Playbook</h3>
-        <p class="card-excerpt">Reviews are the #1 factor guests check before booking. Hotels with 4.5+ ratings earn 30% more bookings. Here's the exact playbook top Indian hotels use.</p>
-        <div class="card-footer">
-          <div class="author-mini"><div class="author-avatar">PD</div><span class="author-name">Priya Desai</span></div>
-          <span class="card-date">Mar 28, 2025</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://billzify.com/blog/dynamic-pricing-strategy" class="blog-card" data-cat="revenue">
-      <div class="card-img navy">📊</div>
-      <div class="card-body">
-        <div class="post-meta"><span class="tag tag-revenue">Revenue</span><span class="read-time">⏱ 7 min</span></div>
-        <h3 class="card-title">How to Reduce Empty Rooms by 40% Using Smart Inventory Management</h3>
-        <p class="card-excerpt">Every empty room is money lost forever. Discover proven strategies Indian hoteliers use to maximize occupancy year-round — last-minute deals, corporate tie-ups, and walk-in pricing.</p>
-        <div class="card-footer">
-          <div class="author-mini"><div class="author-avatar">NJ</div><span class="author-name">Neha Joshi</span></div>
-          <span class="card-date">Mar 18, 2025</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://billzify.com/blog/channel-manager-guide" class="blog-card" data-cat="ota">
-      <div class="card-img blue">🌐</div>
-      <div class="card-body">
-        <div class="post-meta"><span class="tag tag-ota">OTA</span><span class="read-time">⏱ 6 min</span></div>
-        <h3 class="card-title">Agoda vs Expedia vs MakeMyTrip: Which OTA Gives Best Results for Indian Hotels?</h3>
-        <p class="card-excerpt">Not all OTAs are equal — commission rates, guest quality, and volumes vary a lot. A practical comparison of top 5 OTAs for Indian hoteliers based on real data.</p>
-        <div class="card-footer">
-          <div class="author-mini"><div class="author-avatar">LG</div><span class="author-name">Leela Gupta</span></div>
-          <span class="card-date">Mar 7, 2025</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://billzify.com/blog/hotel-google-ranking" class="blog-card" data-cat="tips">
-      <div class="card-img gold">🏠</div>
-      <div class="card-body">
-        <div class="post-meta"><span class="tag tag-tips">Management</span><span class="read-time">⏱ 5 min</span></div>
-        <h3 class="card-title">Homestay vs Hotel: Which Business Model Earns More in India in 2025?</h3>
-        <p class="card-excerpt">With the rise of Airbnb and StayVista, many property owners are wondering which model is more profitable. We analysed 50+ Indian properties to give you the real numbers.</p>
-        <div class="card-footer">
-          <div class="author-mini"><div class="author-avatar">MS</div><span class="author-name">Mohan Sharma</span></div>
-          <span class="card-date">Mar 12, 2025</span>
+          <span class="card-date">Apr 22, 2025</span>
         </div>
       </div>
     </a>
 
   </div>
 
+  <!-- COMING SOON SECTION -->
+  <div class="coming-soon-section">
+    <div class="grid-section-header">
+      <h2>Coming Soon</h2>
+      <span style="font-size:0.82rem;color:var(--text-light)">New articles every week</span>
+    </div>
+    <div class="coming-soon-grid">
+      <div class="coming-card">
+        <div class="coming-icon">⚙️</div>
+        <div class="coming-content">
+          <h4>PMS vs Channel Manager vs Booking Engine — What Does Your Hotel Actually Need?</h4>
+          <span class="coming-badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="coming-card">
+        <div class="coming-icon">⭐</div>
+        <div class="coming-content">
+          <h4>How to Get More 5-Star Reviews on Google & TripAdvisor: A Hotel Playbook</h4>
+          <span class="coming-badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="coming-card">
+        <div class="coming-icon">🌐</div>
+        <div class="coming-content">
+          <h4>Agoda vs Expedia vs MakeMyTrip: Which OTA Gives Best Results for Indian Hotels?</h4>
+          <span class="coming-badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="coming-card">
+        <div class="coming-icon">📊</div>
+        <div class="coming-content">
+          <h4>How to Reduce Empty Rooms by 40% Using Smart Inventory Management</h4>
+          <span class="coming-badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="coming-card">
+        <div class="coming-icon">📱</div>
+        <div class="coming-content">
+          <h4>WhatsApp Marketing for Hotels: Get Direct Bookings Without OTA Commission</h4>
+          <span class="coming-badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="coming-card">
+        <div class="coming-icon">🏠</div>
+        <div class="coming-content">
+          <h4>Billzify vs Aiosell — Honest Comparison for Indian Hotels 2025</h4>
+          <span class="coming-badge">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- TWO COL -->
   <div class="two-col">
     <div>
-      <div class="grid-section-header"><h2>Most Popular This Month</h2></div>
+      <div class="grid-section-header"><h2>Most Read Articles</h2></div>
       <div class="list-posts">
         <a href="https://billzify.com/blog/channel-manager-guide" class="list-card top">
           <div class="list-num">1</div>
-          <div class="list-content"><h3>Complete Guide to Hotel Channel Manager Setup in India (Step by Step)</h3><p>The most detailed walkthrough on connecting your hotel to all major OTAs with real-time inventory sync — for Indian hoteliers.</p></div>
+          <div class="list-content">
+            <h3>Complete Guide to Hotel Channel Manager Setup in India (Step by Step)</h3>
+            <p>The most detailed walkthrough on connecting your hotel to all major OTAs with real-time inventory sync — for Indian hoteliers.</p>
+          </div>
         </a>
         <a href="https://billzify.com/blog/dynamic-pricing-strategy" class="list-card top">
           <div class="list-num">2</div>
-          <div class="list-content"><h3>How Small Hotels Are Beating Big Chains Using Smart Pricing Software</h3><p>A boutique hotel in Jaipur increased revenue by ₹3.2L per month after switching to AI-driven pricing. Here's the full story.</p></div>
+          <div class="list-content">
+            <h3>Dynamic Pricing: How Indian Hotels Are Earning 23% More Without Adding Rooms</h3>
+            <p>Seasonal rates, weekend pricing, and occupancy-based adjustments — the complete revenue management guide for Indian hotel owners.</p>
+          </div>
         </a>
         <a href="https://billzify.com/blog/hotel-google-ranking" class="list-card">
           <div class="list-num">3</div>
-          <div class="list-content"><h3>Checklist: 20 Things to Do Before Listing Your Hotel on Booking.com</h3><p>Most hotels make the same avoidable mistakes. Use this checklist to maximize visibility and bookings on every OTA.</p></div>
-        </a>
-        <a href="https://billzify.com/blog/hotel-google-ranking" class="list-card">
-          <div class="list-num">4</div>
-          <div class="list-content"><h3>How to Handle Negative Guest Reviews Without Hurting Your Reputation</h3><p>One bad review can cost you 30 future bookings. The exact response strategy that turns negative reviews into trust signals.</p></div>
-        </a>
-        <a href="https://billzify.com/blog/dynamic-pricing-strategy" class="list-card">
-          <div class="list-num">5</div>
-          <div class="list-content"><h3>WhatsApp Marketing for Hotels: Get Direct Bookings Without OTA Commission</h3><p>Direct bookings save 15–25% OTA commission. The complete WhatsApp strategy top Indian hotels use for repeat bookings.</p></div>
+          <div class="list-content">
+            <h3>How to Rank Your Hotel on Google and Get Direct Bookings — Free</h3>
+            <p>Google Business Profile setup, review collection strategy, local SEO keywords, and website optimization for Indian hotels.</p>
+          </div>
         </a>
       </div>
     </div>
@@ -368,31 +317,38 @@ footer a{color:var(--gold-light);text-decoration:none}
     <aside class="sidebar">
       <div class="sidebar-widget newsletter-widget">
         <div class="widget-title">📬 Get Weekly Hotel Tips</div>
-        <p>Join 5,000+ Indian hoteliers who get our best strategies every Tuesday. Free, no spam.</p>
+        <p>Join Indian hoteliers getting our best strategies every week. Free, no spam.</p>
         <input type="email" class="nl-input" placeholder="your@email.com">
         <button class="nl-btn">Subscribe Free →</button>
       </div>
       <div class="sidebar-widget">
         <div class="widget-title">Browse by Topic</div>
         <div class="topics-list">
-          <button class="topic-chip">OTA Management</button>
-          <button class="topic-chip">Channel Manager</button>
-          <button class="topic-chip">Revenue Tips</button>
-          <button class="topic-chip">Booking Engine</button>
-          <button class="topic-chip">Property Management</button>
-          <button class="topic-chip">Guest Reviews</button>
-          <button class="topic-chip">Dynamic Pricing</button>
-          <button class="topic-chip">Hotel SEO</button>
-          <button class="topic-chip">Housekeeping</button>
-          <button class="topic-chip">Homestays</button>
+          <button class="topic-chip" onclick="filterCat(null,'ota')">OTA Management</button>
+          <button class="topic-chip" onclick="filterCat(null,'ota')">Channel Manager</button>
+          <button class="topic-chip" onclick="filterCat(null,'revenue')">Revenue Tips</button>
+          <button class="topic-chip" onclick="filterCat(null,'tech')">Booking Engine</button>
+          <button class="topic-chip" onclick="filterCat(null,'tech')">Property Management</button>
+          <button class="topic-chip" onclick="filterCat(null,'guest')">Guest Reviews</button>
+          <button class="topic-chip" onclick="filterCat(null,'revenue')">Dynamic Pricing</button>
+          <button class="topic-chip" onclick="filterCat(null,'seo')">Hotel SEO</button>
         </div>
       </div>
       <div class="sidebar-widget">
         <div class="widget-title">Recently Published</div>
         <div class="recent-list">
-          <a href="https://billzify.com/blog/channel-manager-guide" class="recent-item"><div class="recent-thumb">🏨</div><div><h4>How to Set Up Automatic Billing for Group Bookings</h4><span class="recent-date">Apr 24, 2025</span></div></a>
-          <a href="https://billzify.com/blog/dynamic-pricing-strategy" class="recent-item"><div class="recent-thumb">💡</div><div><h4>5 Ways to Upsell Room Upgrades Without Being Pushy</h4><span class="recent-date">Apr 18, 2025</span></div></a>
-          <a href="https://billzify.com/blog/hotel-google-ranking" class="recent-item"><div class="recent-thumb">📱</div><div><h4>Mobile Check-in: Is Your Hotel Ready for 2025 Travellers?</h4><span class="recent-date">Apr 21, 2025</span></div></a>
+          <a href="https://billzify.com/blog/hotel-google-ranking" class="recent-item">
+            <div class="recent-thumb">📈</div>
+            <div><h4>How to Rank Your Hotel on Google Without Ads</h4><span class="recent-date">Apr 22, 2025</span></div>
+          </a>
+          <a href="https://billzify.com/blog/channel-manager-guide" class="recent-item">
+            <div class="recent-thumb">🔗</div>
+            <div><h4>Complete Channel Manager Guide for Indian Hotels</h4><span class="recent-date">Apr 20, 2025</span></div>
+          </a>
+          <a href="https://billzify.com/blog/dynamic-pricing-strategy" class="recent-item">
+            <div class="recent-thumb">💰</div>
+            <div><h4>Dynamic Pricing: Earn 23% More Revenue</h4><span class="recent-date">Apr 15, 2025</span></div>
+          </a>
         </div>
       </div>
     </aside>
@@ -400,7 +356,7 @@ footer a{color:var(--gold-light);text-decoration:none}
 
   <div class="cta-banner">
     <h2>Ready to Automate Your Hotel Operations?</h2>
-    <p>Join 2,000+ hotels across India using Billzify to manage bookings, OTAs, and revenue — all from one dashboard.</p>
+    <p>Join 225+ hotels across India using Billzify to manage bookings, OTAs, and revenue — all from one dashboard.</p>
     <div class="cta-btns">
       <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn-primary">🚀 Get Free Demo</a>
       <a href="https://billzify.com/#pricing" class="btn-ghost">View Pricing</a>
@@ -422,17 +378,20 @@ footer a{color:var(--gold-light);text-decoration:none}
 </footer>
 
 <script>
-function filterCat(btn,cat){
-  document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.blog-card').forEach(card=>{
-    card.style.display=(cat==='all'||card.dataset.cat===cat)?'flex':'none';
+function filterCat(btn, cat) {
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.querySelectorAll('.blog-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'flex' : 'none';
   });
+  if (cat !== 'all') {
+    document.querySelector('.main-wrap').scrollIntoView({behavior:'smooth'});
+  }
 }
-document.getElementById('searchInput').addEventListener('input',function(){
-  const q=this.value.toLowerCase();
-  document.querySelectorAll('.blog-card').forEach(card=>{
-    card.style.display=card.innerText.toLowerCase().includes(q)?'flex':'none';
+document.getElementById('searchInput').addEventListener('input', function() {
+  const q = this.value.toLowerCase();
+  document.querySelectorAll('.blog-card').forEach(card => {
+    card.style.display = card.innerText.toLowerCase().includes(q) ? 'flex' : 'none';
   });
 });
 </script>

@@ -27,6 +27,81 @@
 <!-- OG IMAGE ABSOLUTE URL KARO -->
 <meta property="og:image" content="https://www.billzify.com/static/img/abimg.png">
 
+<!-- ============================================================ -->
+<!-- SEO: Structured Data (JSON-LD) — helps Google show rich       -->
+<!-- results (price, FAQ dropdowns) directly in search results.   -->
+<!-- This is invisible to users, only read by search engines.     -->
+<!-- ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Billzify Channel Manager",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, Android, iOS",
+  "description": "Billzify Channel Manager syncs hotel rates and availability in real-time across Booking.com, MakeMyTrip, Airbnb, Agoda, Expedia and 100+ OTAs from a single dashboard.",
+  "offers": {
+    "@type": "Offer",
+    "price": "1",
+    "priceCurrency": "INR",
+    "description": "Starting price per room per day"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Billzify",
+    "url": "https://www.billzify.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a hotel channel manager?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A hotel channel manager is software that lets you update room rates and availability across multiple OTAs (like Booking.com, MakeMyTrip, Airbnb, and Expedia) from a single dashboard, instead of updating each one manually."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a channel manager cost in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Billzify's hotel channel manager starts at just ₹1 per room per day, with no hidden setup fees, making it one of the most affordable channel manager solutions in India."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which OTAs does Billzify Channel Manager connect with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Billzify connects with 100+ OTAs and platforms including Booking.com, MakeMyTrip, Airbnb, Agoda, Expedia, Goibibo, and major metasearch engines like Google Hotels and TripAdvisor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a channel manager prevent double bookings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Billzify syncs your inventory in real time across every connected OTA, so once a room is booked on one platform, it's instantly blocked everywhere else — eliminating overbookings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Billzify Channel Manager suitable for small hotels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Billzify is built for hotels, resorts, homestays, and guesthouses of all sizes across India, with simple onboarding and no technical expertise required."
+      }
+    }
+  ]
+}
+</script>
+
 
     <!-- Header Start -->
     <div class="container-fluid bg-white  mt-0 mb-5" >
@@ -38,7 +113,7 @@
                     >Billzify</h3> -->
                     {% comment %} <img class="img-fluid" src="{% static 'img/3.png'%}" style="height:90px" alt=""> {% endcomment %}
                     <h1 class="mt-0 mb-3 " style="font-family:'Poppins', sans-serif;color:#1f2937;">Powerful Hotel Channel Manager – Optimize Your Bookings</h1>
-                    <p class=" pe-3 me-3  mb-0" style="font-weight: 500;color: #4b5563">Managing multiple OTAs and direct bookings has never been easier. A Billzify hotel <strong>channel manager</strong> helps you sync rates and availability in real-time, reducing overbookings and maximizing revenue.
+                    <p class=" pe-3 me-3  mb-0" style="font-weight: 500;color: #4b5563">Managing multiple OTAs and direct bookings has never been easier. A Billzify hotel <strong>channel manager</strong> helps you sync rates and availability in real-time across 100+ OTAs and directly on Google Search & Maps, reducing overbookings and maximizing revenue.
 
                     </p>
                     
@@ -58,6 +133,7 @@
 
 
 <!-- About Start -->
+ <div  style="background: #EFEFF6">
 <div class="container-xxl py-6 " id="about" style="background: #EFEFF6">
     <div class="container">
         <div class="row g-6">
@@ -75,7 +151,7 @@
             
         </div>
     </div>
-</div>
+</div></div>
 <!-- About End -->
 
 
@@ -140,6 +216,159 @@
 <!-- About End -->
     
 </div>
+
+<!-- ============================================================ -->
+<!-- NEW: Google Hotel Ads Integration Section                     -->
+<!-- IMPORTANT: Upload these 2 images to your static/img/ folder  -->
+<!-- with these EXACT filenames, or update the src paths below:   -->
+<!--   1. billzify-google-booking-engine.png                      -->
+<!--   2. google-compare-illustration.png                         -->
+<!-- ============================================================ -->
+<div class="container-xxl py-6" id="google-hotel-ads">
+    <div class="container">
+        <div class="row g-6 align-items-center">
+            <div class="col-lg-6">
+                <center>
+                    <img class="img-fluid" style="border-radius:12px;rgba(0, 0, 0, 0.04) 0px 3px 5px;max-width:380px;"
+                         src="{% static 'img/billzify-google-booking-engine.png' %}" alt="Billzify rates shown on Google Hotel search results">
+                </center>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="lh-base mb-3">Get Your Hotel Listed Directly on Google Search & Maps</h3>
+                <p style="font-weight: 500;color: #4b5563">
+                    Billzify connects your hotel's rates and availability directly to Google Hotel Ads and Free Booking Links via Google's official API — helping your property get discovered when travelers search on Google.
+                </p>
+                <p style="font-weight: 500;color: #4b5563">
+                    Direct Google Hotel Ads integration — get your rates shown to travelers searching on Google Search & Maps, right alongside Booking.com, MakeMyTrip, and Agoda.
+                </p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Your rates appear next to major OTAs on Google</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Real-time price & availability sync</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Drive zero-commission direct bookings from Google</p>
+                <a class="btn btn-primary py-3 px-5 mt-3" href="https://wa.me/message/BWCMUEL3U54RF1">Get A Free Demo</a>
+            </div>
+        </div>
+        <!-- <div class="row mt-5">
+            <div class="col-lg-12">
+                <center>
+                    <img class="img-fluid" style="max-width:600px;"
+                         src="{% static 'img/google-compare-illustration.png' %}" alt="Compare hotel rates on Google with Billzify">
+                </center>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- Google Hotel Ads Section End -->
+
+<!-- ============================================================ -->
+<!-- NEW: Pricing Section — same visual pattern as "About" block  -->
+<!-- above (container-xxl py-5, #EFEFF6 background, btn-primary)  -->
+<!-- ============================================================ -->
+ <div  style="background: #EFEFF6">
+<div class="container-xxl py-6" id="pricing" style="background: #EFEFF6">
+    <div class="container">
+        <div class="row g-6">
+            <div class="col-lg-12">
+                <div class="d-flex align-items-center mb-5">
+                    <h3 class="lh-base mb-0">Affordable Channel Manager Pricing for Indian Hotels</h3>
+                </div>
+                <p style="font-weight: 500;color: #4b5563">
+                    Billzify Channel Manager is built for hotels of every size — from independent guesthouses to multi-property groups —
+                    without the high setup costs that international channel managers charge.
+                </p>
+                <h2 class="mt-4 mb-3" style="font-family:'Poppins', sans-serif;color:#1f2937;">
+                    Starting at just <span class="text-primary">₹1 / room / day</span>
+                </h2>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>No hidden setup fees</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Pay only for the rooms you connect</p>
+                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Free onboarding & dedicated support</p>
+                <a class="btn btn-primary py-3 px-5 mt-3" href="https://wa.me/message/BWCMUEL3U54RF1">Get A Free Demo</a>
+            </div>
+        </div>
+    </div>
+</div></div>
+<!-- Pricing End -->
+
+<!-- ============================================================ -->
+<!-- NEW: FAQ Section — matches the "Key Benefits" heading/        -->
+<!-- paragraph pattern used above (no JS framework dependency,    -->
+<!-- so it always renders even without Bootstrap's JS bundle)     -->
+<!-- These exact questions are also marked up above as FAQPage    -->
+<!-- schema for Google rich-result eligibility.                   -->
+<!-- ============================================================ -->
+<div class="container-xxl py-5" id="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="row g-6 mt-5">
+            <div class="col-lg-6">
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">What is a hotel channel manager?</h5>
+                </div>
+                <p class="mb-4">A channel manager lets you update room rates and availability across multiple OTAs — like Booking.com, MakeMyTrip, Airbnb, and Expedia — from a single dashboard, instead of updating each one manually.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">How much does a channel manager cost in India?</h5>
+                </div>
+                <p class="mb-4">Billzify's channel manager starts at just ₹1 per room per day, with no hidden setup fees — making it one of the most affordable options for Indian hotels.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Which OTAs does Billzify connect with?</h5>
+                </div>
+                <p class="mb-4">Billzify connects with 100+ OTAs and metasearch platforms, including Booking.com, MakeMyTrip, Airbnb, Agoda, Expedia, Goibibo, Google Hotels, and TripAdvisor.</p>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Does a channel manager prevent double bookings?</h5>
+                </div>
+                <p class="mb-4">Yes. Billzify syncs inventory in real time across every connected OTA — once a room is booked anywhere, it's instantly blocked everywhere else, eliminating overbookings.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Is Billzify suitable for small hotels?</h5>
+                </div>
+                <p class="mb-4">Yes. Billzify is built for hotels, resorts, homestays, and guesthouses of every size across India, with simple onboarding and no technical expertise required.</p>
+
+                <div class="align-items-center mb-3 mt-3">
+                    <h5 class="mb-0">Do I need technical knowledge to set it up?</h5>
+                </div>
+                <p class="mb-4">No. Billzify's team handles onboarding and OTA connections for you, and the dashboard is designed to be simple enough for any hotel staff member to use.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ End -->
+
+<!-- ============================================================ -->
+<!-- PLACEHOLDER: Add real customer testimonials here once you    -->
+<!-- have 2-3 hotel clients. DO NOT use fake names/quotes — Google -->
+<!-- and customers can both penalize/distrust fabricated reviews. -->
+<!-- Replace the text below with real client names + quotes when  -->
+<!-- available. Keeping the section commented out until then.     -->
+<!-- ============================================================ -->
+{% comment %}
+<div class="container-xxl py-6" id="testimonials" style="background: #EFEFF6">
+    <div class="container">
+        <h3 class="lh-base mb-5">What Hoteliers Say About Billzify</h3>
+        <div class="row g-6">
+            <div class="col-lg-4">
+                <p style="font-style: italic;">"Quote from real customer goes here."</p>
+                <p class="mb-0" style="font-weight:600;color:#1f2937;">— Owner Name, Hotel Name, City</p>
+            </div>
+            <div class="col-lg-4">
+                <p style="font-style: italic;">"Quote from real customer goes here."</p>
+                <p class="mb-0" style="font-weight:600;color:#1f2937;">— Owner Name, Hotel Name, City</p>
+            </div>
+            <div class="col-lg-4">
+                <p style="font-style: italic;">"Quote from real customer goes here."</p>
+                <p class="mb-0" style="font-weight:600;color:#1f2937;">— Owner Name, Hotel Name, City</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endcomment %}
 
     {% comment %} <div class="container">
         
