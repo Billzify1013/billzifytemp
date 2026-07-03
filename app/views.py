@@ -102,3 +102,6 @@ def delete_account_view(request):
 
 def bloggoogleranking(request):
     return render(request, 'hotel-google-ranking.html')
+
+def mobileapp(request):
+    return render(request, 'app.html')

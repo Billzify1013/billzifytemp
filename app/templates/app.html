@@ -1,0 +1,605 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <!-- ✅ SEO META TAGS - APP PAGE -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE -->
+    <title>Hotel Channel Manager App India | Billzify App - Download for Android & iOS</title>
+
+    <!-- DESCRIPTION -->
+    <meta name="description" content="Download Billzify - India's easiest hotel channel manager app. Manage OTA bookings, update rates & inventory, view sales reports from your phone. ₹1/room/day. Free on Play Store & App Store.">
+
+    <!-- KEYWORDS -->
+    <meta name="keywords" content="hotel channel manager app, channel manager app India, hotel management app, hotel PMS app, OTA booking app, hotel app for android, update OTA rates from phone, mobile channel manager, Billzify app">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://www.billzify.com/app/">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Billzify App - India's Easiest Hotel Channel Manager App">
+    <meta property="og:description" content="Manage your hotel from your pocket. OTA bookings, rate updates, inventory & sales reports - all in one app. Download free on Play Store & App Store.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.billzify.com/app/">
+    <meta property="og:image" content="https://www.billzify.com/static/img/billzify-hotel-channel-manager-app-dashboard.png">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Billzify App - Hotel Channel Manager in Your Pocket">
+    <meta name="twitter:description" content="India's easiest channel manager app. Bookings, rates, inventory & reports from your phone. ₹1/room/day.">
+    <meta name="twitter:image" content="https://www.billzify.com/static/img/billzify-hotel-channel-manager-app-dashboard.png">
+
+    <!-- FAVICON -->
+    <link href="/static/img/newshadowlogo.png" rel="icon">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- LIBRARIES -->
+    <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP + STYLE -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <!-- ✅ APP PAGE SPACING FIX -->
+    <style>
+        /* Heading ke neeche proper gap - content chipkega nahi */
+        .app-section-heading {
+            margin-bottom: 35px !important;
+            margin-top: 0 !important;
+            line-height: 1.4;
+        }
+        .app-section-subtext {
+            font-weight: 500;
+            color: #4b5563;
+            max-width: 850px;
+            margin-bottom: 40px;
+        }
+        /* App screenshots styling */
+        .app-screenshot {
+            max-height: 520px;
+            margin-bottom: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(140, 82, 255, 0.12);
+        }
+        /* Mobile pe images ke neeche gap + chhoti size */
+        @media (max-width: 991px) {
+            .app-screenshot {
+                max-height: 440px;
+                margin-top: 15px;
+                margin-bottom: 40px;
+            }
+            .app-section-heading {
+                margin-bottom: 25px !important;
+                font-size: 26px;
+            }
+            .app-section-subtext {
+                margin-bottom: 30px;
+            }
+        }
+        .app-store-btn-dark {
+            background: #1f2937;
+            color: #fff !important;
+        }
+        .app-store-btn-dark:hover {
+            background: #111827;
+            color: #fff;
+        }
+    </style>
+
+    <!-- ✅ MOBILE APPLICATION SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Billzify - Hotel Channel Manager App",
+      "operatingSystem": "ANDROID, IOS",
+      "applicationCategory": "BusinessApplication",
+      "description": "India's easiest hotel channel manager app. Manage OTA bookings from MakeMyTrip, Booking.com, Goibibo, Agoda & Expedia, update room rates and inventory, and track hotel sales reports - all from your phone.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "description": "Free download. Software plan at ₹1 per room per day."
+      },
+      "url": "https://www.billzify.com/app/",
+      "screenshot": [
+        "https://www.billzify.com/static/img/billzify-hotel-channel-manager-app-dashboard.png",
+        "https://www.billzify.com/static/img/billzify-hotel-app-sales-report.png",
+        "https://www.billzify.com/static/img/billzify-ota-inventory-rate-update-app.png",
+        "https://www.billzify.com/static/img/billzify-hotel-ota-bookings-app.png"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Billzify",
+        "url": "https://www.billzify.com"
+      }
+    }
+    </script>
+
+    <!-- ✅ FAQ SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Billzify hotel channel manager app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Billzify app is India's easiest hotel channel manager app that lets hotel owners manage bookings from MakeMyTrip, Booking.com, Goibibo, Agoda and Expedia, update room rates and inventory, and view daily sales reports - all from their mobile phone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Billzify app free to download?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the Billzify app is free to download on Google Play Store and Apple App Store. The software plan costs only ₹1 per room per day with all features included."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I update OTA room rates and inventory from my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. With the Billzify app you can update prices and available rooms for any date, and the changes sync instantly to all connected OTAs like MakeMyTrip, Booking.com, Goibibo, Agoda and Expedia. You can also stop-sell any date with one tap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which OTAs does the Billzify app support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Billzify supports 50+ OTA integrations including MakeMyTrip, Goibibo, Booking.com, Agoda, Expedia, Expedia Affiliate Network, Airbnb and Google Hotels - all synced in real time from one app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Billzify app work for small and budget hotels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Billzify is specially designed for small and mid-size Indian hotels, guest houses, resorts and homestays. At ₹1 per room per day, even a 10-room hotel can afford a full channel manager and PMS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a computer to use Billzify?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The Billzify app works fully on any Android phone or iPhone. You can manage bookings, rates, inventory and reports without a laptop or desktop."
+          }
+        }
+      ]
+    }
+    </script>
+
+</head>
+
+<!-- ================= HERO START ================= -->
+<div class="container-fluid bg-white my-0 mt-0" id="newsmain">
+    <div class="container">
+        <div class="row g-1 align-items-center" style="margin-top:95px">
+            <div class="col-lg-7 py-0 pb-0 pt-lg-0">
+
+                <!-- ✅ H1 - MAIN KEYWORD -->
+                <h1 class="mt-3 mb-4" style="font-family:'Poppins', sans-serif; color:#1f2937; line-height:1.35;">
+                    India's Easiest Hotel Channel Manager App
+                </h1>
+
+                <p class="mb-3" style="font-weight:700; color:#1f2937; font-size:18px;">
+                    Your entire hotel, now in your <span style="color:#8C52FF; font-size:22px; font-weight:800;">pocket</span>
+                </p>
+
+                <p class="pe-3 me-3 mb-4" style="font-weight: 500;color: #4b5563">
+                    Manage MakeMyTrip, Booking.com, Goibibo, Agoda & Expedia bookings, update room rates
+                    and inventory, and track your hotel's revenue — from anywhere, anytime.
+                    No laptop needed. No front desk dependency. Just your phone.
+                </p>
+
+                <!-- ✅ APP STORE BUTTONS - Replace # with live store links -->
+                <div class="d-flex flex-wrap mt-4">
+                    <a href="#" class="btn btn-primary py-3 px-4 me-3 mb-3" id="playstore-link">
+                        <i class="fab fa-google-play me-2"></i>Get it on Play Store
+                    </a>
+                    <a href="#" class="btn py-3 px-4 mb-3 app-store-btn-dark" id="appstore-link">
+                        <i class="fab fa-apple me-2"></i>Download on App Store
+                    </a>
+                </div>
+
+                <p class="mt-2 mb-4" style="color:#4b5563; font-weight:500;">
+                    <i class="far fa-check-circle text-primary me-2"></i>Free download
+                    <span class="ms-3"><i class="far fa-check-circle text-primary me-2"></i>Only ₹1/room/day</span>
+                </p>
+
+            </div>
+            <div class="col-lg-5">
+                <center>
+                    <img class="img-fluid mt-3 app-screenshot"
+                         src="{% static 'img/billzify-hotel-channel-manager-app-dashboard.png' %}"
+                         alt="Billzify hotel channel manager app dashboard showing arrivals, departures and available rooms">
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ================= HERO END ================= -->
+
+
+<!-- ================= SEO INTRO CONTENT ================= -->
+<div class="container-fluid bg-white pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="text-gray app-section-heading">
+                    What is the Billzify <span class="text-primary">Hotel Channel Manager App?</span>
+                </h2>
+                <p class="app-section-subtext">
+                    Billzify app is a mobile channel manager and hotel management app built for Indian hoteliers.
+                    It connects your hotel with 50+ OTAs — MakeMyTrip, Goibibo, Booking.com, Agoda, Expedia,
+                    Airbnb and more — so every booking, cancellation, rate change and room update happens in
+                    real time, directly from your Android phone or iPhone.
+                </p>
+                <p class="app-section-subtext">
+                    Most hotel software in India still needs a computer at the front desk. But hotel owners are
+                    not always at the front desk — they are travelling, at home, or managing multiple properties.
+                    That is why we built the Billzify app: a complete hotel PMS and channel manager that fits in
+                    your pocket. Update tonight's room price while having dinner. Stop-sell a sold-out date from
+                    the highway. Check today's revenue before you sleep. Everything your hotel needs, without
+                    opening a laptop even once.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= FEATURE 1: BOOKINGS ================= -->
+<div class="container-fluid my-0 py-6" id="service" style="background: #EFEFF6">
+    <div class="container">
+        <div class="row wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-12">
+                <h2 class="text-gray app-section-heading">
+                    All Your <span class="text-primary">OTA Bookings</span> in One App — MakeMyTrip, Goibibo, Expedia & More
+                </h2>
+                <p class="app-section-subtext">
+                    Stop juggling 5 different OTA extranets and endless confirmation emails. The Billzify
+                    booking app brings every reservation from every channel into one clean list — with guest
+                    name, check-in dates, booking amount and payment status clearly visible.
+                </p>
+            </div>
+        </div>
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+                <center>
+                    <img class="img-fluid app-screenshot" id="bestimg"
+                         src="{% static 'img/billzify-hotel-ota-bookings-app.png' %}"
+                         alt="Billzify app bookings screen showing MakeMyTrip, Goibibo and Expedia hotel bookings with prepaid status">
+                </center>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="feature-box card border rounded p-3">
+                                    <i class="fa fa-check fa-2x text-primary mb-1"></i>
+                                    <h3 class="h6 mb-2">Every Booking, Every OTA, One Screen</h3>
+                                    <p class="mb-3">
+                                        New booking on MakeMyTrip? Cancellation on Goibibo? See everything live in one list. No more logging into 5 different extranets to know what's happening in your own hotel.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="feature-box card border rounded p-3">
+                                    <i class="fa fa-check fa-2x text-primary mb-1"></i>
+                                    <h3 class="h6 mb-2">Smart Filters for Quick Action</h3>
+                                    <p class="mb-3">
+                                        Filter bookings by OTA, cancellations, prepaid or pay-at-hotel in one tap. Know exactly which guests are arriving today and which bookings got cancelled — before your front desk does.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="feature-box card border rounded p-3">
+                            <i class="fa fa-check fa-2x text-primary mb-1"></i>
+                            <h3 class="h6 mb-2">Instant Booking Notifications</h3>
+                            <p class="mb-1">
+                                Get notified the moment a new booking or cancellation comes in. Whether you are at the hotel, at home or travelling — you are always in control of your property.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= FEATURE 2: RATES & INVENTORY ================= -->
+<div class="container-fluid my-0 py-6 bg-white" id="service">
+    <div class="container">
+        <div class="row wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-12">
+                <h2 class="text-gray app-section-heading">
+                    Update <span class="text-primary">Room Rates & Inventory</span> on All OTAs in Seconds
+                </h2>
+                <p class="app-section-subtext">
+                    Dynamic pricing is how smart hotels earn more. With the Billzify app, changing your OTA
+                    room rates takes 10 seconds — select the date, type the new price, save. It syncs to
+                    every connected OTA instantly, so you never lose revenue on high-demand dates or lose
+                    bookings on slow days.
+                </p>
+            </div>
+        </div>
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-7 order-2 order-lg-1">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="feature-box card border rounded p-3">
+                                    <i class="fa fa-check fa-2x text-primary mb-1"></i>
+                                    <h3 class="h6 mb-2">Change Prices for Any Date, Any Room</h3>
+                                    <p class="mb-3">
+                                        Weekend demand high? Increase your deluxe room price in 10 seconds. The new rate syncs instantly to MakeMyTrip, Booking.com, Agoda and all connected OTAs.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="feature-box card border rounded p-3">
+                                    <i class="fa fa-check fa-2x text-primary mb-1"></i>
+                                    <h3 class="h6 mb-2">One-Tap Stop Sell</h3>
+                                    <p class="mb-3">
+                                        Rooms full for tonight? Hit the Stop Sell toggle and all OTAs stop taking bookings for that date immediately. The easiest overbooking protection — right from your phone.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="feature-box card border rounded p-3">
+                            <i class="fa fa-check fa-2x text-primary mb-1"></i>
+                            <h3 class="h6 mb-2">Room-Type Wise Inventory Control</h3>
+                            <p class="mb-1">
+                                Manage availability for deluxe rooms, family suites and every room category separately. Sell exactly what you have — never more, never less.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 order-1 order-lg-2">
+                <center>
+                    <img class="img-fluid app-screenshot" id="bestimg"
+                         src="{% static 'img/billzify-ota-inventory-rate-update-app.png' %}"
+                         alt="Billzify app inventory and rate update screen with room-wise price, availability and stop sell option">
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= FEATURE 3: SALES REPORTS ================= -->
+<div class="container-fluid my-0 py-6" id="service" style="background: #EFEFF6">
+    <div class="container">
+        <div class="row wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-12">
+                <h2 class="text-gray app-section-heading">
+                    Hotel <span class="text-primary">Sales Reports & Revenue Analytics</span> — Live on Your Phone
+                </h2>
+                <p class="app-section-subtext">
+                    How much did your hotel earn this month? Which OTA gives you the most business? What is
+                    your occupancy and ADR? Most hotel owners cannot answer these questions without asking
+                    their manager. With Billzify's hotel sales report app, the answers are always one tap away —
+                    accurate, automatic and updated in real time.
+                </p>
+            </div>
+        </div>
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+                <center>
+                    <img class="img-fluid app-screenshot" id="bestimg"
+                         src="{% static 'img/billzify-hotel-app-sales-report.png' %}"
+                         alt="Billzify app sales report showing net revenue, occupancy, ADR and channel-wise revenue chart">
+                </center>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="feature-box card border rounded p-3">
+                                    <i class="fa fa-check fa-2x text-primary mb-1"></i>
+                                    <h3 class="h6 mb-2">Revenue, Occupancy & ADR at a Glance</h3>
+                                    <p class="mb-3">
+                                        Net revenue, cancellations, average occupancy and ADR — the 4 numbers every hotelier must track daily, calculated automatically. Select any date range: 30 days, this month, or the whole year.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="feature-box card border rounded p-3">
+                                    <i class="fa fa-check fa-2x text-primary mb-1"></i>
+                                    <h3 class="h6 mb-2">Channel-Wise Revenue Breakdown</h3>
+                                    <p class="mb-3">
+                                        Which OTA earns you the most — Goibibo, MakeMyTrip or Agoda? See revenue split by channel and decide where to push rates, offers and inventory for maximum profit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="feature-box card border rounded p-3">
+                            <i class="fa fa-check fa-2x text-primary mb-1"></i>
+                            <h3 class="h6 mb-2">No Excel, No Manual Registers</h3>
+                            <p class="mb-1">
+                                Stop maintaining sales registers and monthly Excel sheets. Every booking, night and rupee is tracked automatically — accurate reports without any extra work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= WHY BILLZIFY APP ================= -->
+<div class="container-fluid bg-white my-0 py-6">
+    <div class="container">
+        <div class="row wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-12">
+                <h2 class="text-gray app-section-heading">
+                    Why Hotel Owners Call It <span class="text-primary">India's Easiest Channel Manager App</span>
+                </h2>
+                <p class="app-section-subtext">
+                    Most channel manager software is built for big hotel chains with trained staff and
+                    expensive annual contracts. The Billzify app is built for real Indian hotels — budget
+                    hotels, family-run properties, resorts, guest houses and homestays. Simple design,
+                    everything within 2 taps, and it works perfectly even on budget Android phones with
+                    slow internet.
+                </p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.2s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <i class="fa fa-rupee-sign fa-2x text-primary mb-2"></i>
+                    <h3 class="h6 mb-2">Only ₹1/Room/Day</h3>
+                    <p class="mb-0">No lakhs-wala annual contract, no hidden charges, no setup fees. India's most affordable channel manager pricing — even a 10-room hotel can afford it.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <i class="fa fa-sync-alt fa-2x text-primary mb-2"></i>
+                    <h3 class="h6 mb-2">50+ OTA Integrations</h3>
+                    <p class="mb-0">MakeMyTrip, Goibibo, Booking.com, Agoda, Expedia, Airbnb, Google Hotels and more — all connected with real-time two-way sync.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.4s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <i class="fa fa-mobile-alt fa-2x text-primary mb-2"></i>
+                    <h3 class="h6 mb-2">Works on Any Phone</h3>
+                    <p class="mb-0">Android ya iPhone — the app is light, fast and works smoothly even on budget phones and slow network areas.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <i class="fa fa-headset fa-2x text-primary mb-2"></i>
+                    <h3 class="h6 mb-2">24/7 Support in Hindi & English</h3>
+                    <p class="mb-0">Stuck anywhere? Call or WhatsApp our support team anytime. Real humans, real help — no chatbot ka chakkar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= FAQ SECTION ================= -->
+<div class="container-fluid my-0 py-6" style="background: #EFEFF6">
+    <div class="container">
+        <div class="row wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-12">
+                <h2 class="text-gray app-section-heading">
+                    Frequently Asked Questions — <span class="text-primary">Billzify Hotel App</span>
+                </h2>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.2s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <h3 class="h6 mb-2">What is the Billzify hotel channel manager app?</h3>
+                    <p class="mb-0">It is India's easiest channel manager app that lets you manage OTA bookings, update room rates & inventory, and view sales reports for your hotel — directly from your Android or iPhone.</p>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <h3 class="h6 mb-2">Is the app free to download?</h3>
+                    <p class="mb-0">Yes. The app is free on Google Play Store and Apple App Store. The Billzify software plan costs only ₹1 per room per day with all features and 24/7 support included.</p>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <h3 class="h6 mb-2">Can I update OTA prices and rooms from my phone?</h3>
+                    <p class="mb-0">Yes. Change price or available rooms for any date, and it syncs instantly to MakeMyTrip, Booking.com, Goibibo, Agoda, Expedia and all connected OTAs. You can also stop-sell any date in one tap.</p>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <h3 class="h6 mb-2">Which OTAs does the Billzify app support?</h3>
+                    <p class="mb-0">50+ integrations including MakeMyTrip, Goibibo, Booking.com, Agoda, Expedia, Expedia Affiliate Network, Airbnb and Google Hotels — all in real time.</p>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.6s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <h3 class="h6 mb-2">Does it work for small and budget hotels?</h3>
+                    <p class="mb-0">Yes. Billzify is specially designed for small and mid-size Indian hotels, guest houses, resorts and homestays. At ₹1/room/day, even a 10-room property can afford a full channel manager and PMS.</p>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                <div class="feature-box card border rounded p-4 h-100">
+                    <h3 class="h6 mb-2">Do I need a computer to use Billzify?</h3>
+                    <p class="mb-0">No. The Billzify app works fully on any Android phone or iPhone. You can manage bookings, rates, inventory and reports without a laptop or desktop.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= DOWNLOAD CTA ================= -->
+<div class="container-fluid bg-white py-6" id="download">
+    <div class="container">
+        <div class="row g-1 align-items-center">
+            <div class="col-lg-7">
+                <h2 class="text-gray app-section-heading">
+                    Run Your Hotel From Your <span class="text-primary">Pocket</span> — Starting Today
+                </h2>
+                <p class="app-section-subtext">
+                    Download the Billzify app now. Setup takes less than a day — our team connects
+                    all your OTAs for you, free of cost. Only ₹1 per room per day.
+                </p>
+
+                <!-- ✅ Replace # with live store links -->
+                <div class="d-flex flex-wrap">
+                    <a href="#" class="btn btn-primary py-3 px-4 me-3 mb-3">
+                        <i class="fab fa-google-play me-2"></i>Get it on Play Store
+                    </a>
+                    <a href="#" class="btn py-3 px-4 mb-3 app-store-btn-dark">
+                        <i class="fab fa-apple me-2"></i>Download on App Store
+                    </a>
+                </div>
+
+                <p class="mt-3 mb-4" style="color:#4b5563; font-weight:500;">
+                    Want a demo first? <a href="https://wa.me/message/BWCMUEL3U54RF1" style="color:#8C52FF; font-weight:700;">WhatsApp us</a> or call <a href="tel:+918889381013" style="color:#8C52FF; font-weight:700;">+91 88893 81013</a>
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <center>
+                    <img class="img-fluid mt-3 app-screenshot"
+                         src="{% static 'img/billzify-hotel-channel-manager-app-dashboard.png' %}"
+                         alt="Download Billzify hotel management app for Android and iOS">
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

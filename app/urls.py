@@ -36,6 +36,7 @@ urlpatterns = [
     path('robots.txt', RobotsTxtView.as_view(), name='robots'),
     path('delete-account/', views.delete_account_view, name='delete_account_view'),
     path('blog/hotel-google-ranking/', views.bloggoogleranking, name="bloggoogleranking"),
+    path('Mobile-app/', views.mobileapp, name="mobileapp"),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
