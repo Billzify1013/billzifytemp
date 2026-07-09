@@ -105,3 +105,12 @@ def bloggoogleranking(request):
 
 def mobileapp(request):
     return render(request, 'app.html')
+
+def channel_manager_price_india(request):
+    return render(request,'channel-manager-price-india.html')
+
+def best_channel_manager_small_hotels(request):
+    return render(request,'best-channel-manager-small-hotels.html')
+
+def channel_manager_vs_pms(request):
+    return render(request,'channel-manager-vs-pms.html')

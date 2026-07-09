@@ -29,14 +29,20 @@ urlpatterns = [
     path('channel-manager-api/', views.cmapi,name="cmapi"),
     path('blog/channel-manager-guide/', views.blogcmguide,name="blogcmguide"),
     path('blog/dynamic-pricing-strategy/', views.blogdyprice,name="blogdyprice"),
+    path('blog/channel-manager-price-india/', views.channel_manager_price_india,name="channel_manager_price_india"),
+    path('blog/best-channel-manager-small-hotels/', views.best_channel_manager_small_hotels,name="best_channel_manager_small_hotels"),
+    path('blog/channel-manager-vs-pms/', views.channel_manager_vs_pms,name="channel_manager_vs_pms"),
+    path('blog/hotel-google-ranking/', views.bloggoogleranking, name="bloggoogleranking"),
+    path('Mobile-app/', views.mobileapp, name="mobileapp"),
+
+
     path('proxy-create-demo/', views.forward_to_live_api, name='proxy_create_demo'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, 
          name='django.contrib.sitemaps.views.sitemap'),
 
     path('robots.txt', RobotsTxtView.as_view(), name='robots'),
     path('delete-account/', views.delete_account_view, name='delete_account_view'),
-    path('blog/hotel-google-ranking/', views.bloggoogleranking, name="bloggoogleranking"),
-    path('Mobile-app/', views.mobileapp, name="mobileapp"),
+    
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -18,6 +18,11 @@ class StaticViewSitemap(Sitemap):
             'blogcmguide',  # blog/channel-manager-guide page
             'bloggoogleranking',
             'mobileapp',
+            'blogdyprice',                        # blog/dynamic-pricing-strategy
+            'bloggoogleranking',                  # blog/hotel-google-ranking
+            'channel_manager_price_india',        # blog/channel-manager-price-india
+            'best_channel_manager_small_hotels',  # blog/best-channel-manager-small-hotels
+            'channel_manager_vs_pms',             # blog/channel-manager-vs-pms
         ]
 
     def location(self, item):
