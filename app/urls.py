@@ -42,6 +42,32 @@ urlpatterns = [
 
     path('robots.txt', RobotsTxtView.as_view(), name='robots'),
     path('delete-account/', views.delete_account_view, name='delete_account_view'),
+
+
+    # blog pages more here
+    path('hotel-software-ujjain/', views.hotel_software_ujjain, name="hotel_software_ujjain"),
+    path('hotel-software-indore/', views.hotel_software_indore, name="hotel_software_indore"),
+    path('hotel-software-jaipur/', views.hotel_software_jaipur, name="hotel_software_jaipur"),
+    path('hotel-software-goa/', views.hotel_software_goa, name="hotel_software_goa"),
+    path('hotel-software-varanasi/', views.hotel_software_varanasi, name="hotel_software_varanasi"),
+    path('hotel-software-udaipur/', views.hotel_software_udaipur, name="hotel_software_udaipur"),
+    path('hotel-software-ayodhya/', views.hotel_software_ayodhya, name="hotel_software_ayodhya"),
+    path('hotel-software-khatu-shyam/', views.hotel_software_khatu_shyam, name="hotel_software_khatu_shyam"),
+    path('hotel-software-somnath/', views.hotel_software_somnath, name="hotel_software_somnath"),
+    path('hotel-software-kolkata/', views.hotel_software_kolkata, name="hotel_software_kolkata"),
+    path('hotel-software-vijayawada/', views.hotel_software_vijayawada, name="hotel_software_vijayawada"),
+    path('hotel-software-nandyal/', views.hotel_software_nandyal, name="hotel_software_nandyal"),
+
+    path('hotel-software-tirupati/', views.hotel_software_tirupati, name="hotel_software_tirupati"),
+    path('hotel-software-shirdi/', views.hotel_software_shirdi, name="hotel_software_shirdi"),
+    path('hotel-software-amritsar/', views.hotel_software_amritsar, name="hotel_software_amritsar"),
+    path('hotel-software-haridwar/', views.hotel_software_haridwar, name="hotel_software_haridwar"),
+    path('hotel-software-rishikesh/', views.hotel_software_rishikesh, name="hotel_software_rishikesh"),
+    path('hotel-software-mathura-vrindavan/', views.hotel_software_mathura_vrindavan, name="hotel_software_mathura_vrindavan"),
+    path('hotel-software-prayagraj/', views.hotel_software_prayagraj, name="hotel_software_prayagraj"),
+    path('hotel-software-puri/', views.hotel_software_puri, name="hotel_software_puri"),
+    path('hotel-software-katra-vaishno-devi/', views.hotel_software_katra_vaishno_devi, name="hotel_software_katra_vaishno_devi"),
+    path('hotel-software-nashik/', views.hotel_software_nashik, name="hotel_software_nashik"),
     
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

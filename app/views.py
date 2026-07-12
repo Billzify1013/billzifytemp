@@ -114,3 +114,72 @@ def best_channel_manager_small_hotels(request):
 
 def channel_manager_vs_pms(request):
     return render(request,'channel-manager-vs-pms.html')
+
+
+def hotel_software_ujjain(request):
+    return render(request, 'hotel-software-ujjain.html')
+
+def hotel_software_indore(request):
+    return render(request, 'hotel-software-indore.html')
+
+def hotel_software_jaipur(request):
+    return render(request, 'hotel-software-jaipur.html')
+
+def hotel_software_goa(request):
+    return render(request, 'hotel-software-goa.html')
+
+def hotel_software_varanasi(request):
+    return render(request, 'hotel-software-varanasi.html')
+
+def hotel_software_udaipur(request):
+    return render(request, 'hotel-software-udaipur.html')
+
+
+def hotel_software_ayodhya(request):
+    return render(request, 'hotel-software-ayodhya.html')
+
+def hotel_software_khatu_shyam(request):
+    return render(request, 'hotel-software-khatu-shyam.html')
+
+def hotel_software_somnath(request):
+    return render(request, 'hotel-software-somnath.html')
+
+def hotel_software_kolkata(request):
+    return render(request, 'hotel-software-kolkata.html')
+
+def hotel_software_vijayawada(request):
+    return render(request, 'hotel-software-vijayawada.html')
+
+def hotel_software_nandyal(request):
+    return render(request, 'hotel-software-nandyal.html')
+
+
+def hotel_software_tirupati(request):
+    return render(request, 'hotel-software-tirupati.html')
+
+def hotel_software_shirdi(request):
+    return render(request, 'hotel-software-shirdi.html')
+
+def hotel_software_amritsar(request):
+    return render(request, 'hotel-software-amritsar.html')
+
+def hotel_software_haridwar(request):
+    return render(request, 'hotel-software-haridwar.html')
+
+def hotel_software_rishikesh(request):
+    return render(request, 'hotel-software-rishikesh.html')
+
+def hotel_software_mathura_vrindavan(request):
+    return render(request, 'hotel-software-mathura-vrindavan.html')
+
+def hotel_software_prayagraj(request):
+    return render(request, 'hotel-software-prayagraj.html')
+
+def hotel_software_puri(request):
+    return render(request, 'hotel-software-puri.html')
+
+def hotel_software_katra_vaishno_devi(request):
+    return render(request, 'hotel-software-katra-vaishno-devi.html')
+
+def hotel_software_nashik(request):
+    return render(request, 'hotel-software-nashik.html')
