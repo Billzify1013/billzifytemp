@@ -183,3 +183,6 @@ def hotel_software_katra_vaishno_devi(request):
 
 def hotel_software_nashik(request):
     return render(request, 'hotel-software-nashik.html')
+
+def hotel_channel_manager(request):
+    return render(request, 'hotel-channel-manager.html')

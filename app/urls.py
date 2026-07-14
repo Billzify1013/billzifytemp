@@ -68,6 +68,8 @@ urlpatterns = [
     path('hotel-software-puri/', views.hotel_software_puri, name="hotel_software_puri"),
     path('hotel-software-katra-vaishno-devi/', views.hotel_software_katra_vaishno_devi, name="hotel_software_katra_vaishno_devi"),
     path('hotel-software-nashik/', views.hotel_software_nashik, name="hotel_software_nashik"),
+
+    path('hotel-channel-manager/', views.hotel_channel_manager, name="hotel_channel_manager"),
     
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
