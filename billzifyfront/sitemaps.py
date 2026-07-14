@@ -3,7 +3,6 @@ from django.urls import reverse
 
 
 class StaticViewSitemap(Sitemap):
-    priority = 0.8
     changefreq = 'monthly'
 
     def items(self):
@@ -17,6 +16,9 @@ class StaticViewSitemap(Sitemap):
             'about',
             'cmapi',                              # channel-manager-api
             'mobileapp',                          # Mobile-app
+
+            # ---------- Pillar guide ----------
+            'hotel_channel_manager',              # /hotel-channel-manager/
 
             # ---------- Blog ----------
             'blog',
@@ -54,3 +56,11 @@ class StaticViewSitemap(Sitemap):
 
     def location(self, item):
         return reverse(item)
+
+    def priority(self, item):
+        # Most important pages get higher priority
+        if item in ('index', 'channelmanager', 'hotel_channel_manager'):
+            return 1.0
+        if item in ('PMS', 'BookingEngine', 'price'):
+            return 0.9
+        return 0.8
