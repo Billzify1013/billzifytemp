@@ -14,20 +14,40 @@ class StaticViewSitemap(Sitemap):
             'BookingEngine',
             'price',
             'about',
-            'cmapi',                              # channel-manager-api
-            'mobileapp',                          # Mobile-app
+            'cmapi',                                    # channel-manager-api
+            'mobileapp',                                # Mobile-app
 
-            # ---------- Pillar guide ----------
-            'hotel_channel_manager',              # /hotel-channel-manager/
+            # ---------- Pillar guides ----------
+            'hotel_channel_manager',                    # /hotel-channel-manager/
+            'hotel_pms_software',                       # /hotel-pms-software/
+            'hotel_booking_engine',                     # /hotel-booking-engine/
+            'hotel_billing_software',                   # /hotel-billing-software/
+            'list_hotel_on_makemytrip',                 # /list-hotel-on-makemytrip/
+            'list_hotel_on_booking_com',                # /list-hotel-on-booking-com/
+            'list_hotel_on_airbnb',                     # /list-hotel-on-airbnb/
+
+            # ---------- OTA-specific pages ----------
+            'makemytrip_channel_manager',
+            'booking_com_channel_manager',
+            'goibibo_channel_manager',
+            'agoda_channel_manager',
+            'airbnb_channel_manager',
+
+            # ---------- Property type pages ----------
+            'homestay_management_software',
+            'resort_management_software',
+            'guest_house_management_software',
+            'boutique_hotel_software',
+            'service_apartment_management_software',
 
             # ---------- Blog ----------
             'blog',
-            'blogcmguide',                        # blog/channel-manager-guide
-            'blogdyprice',                        # blog/dynamic-pricing-strategy
-            'bloggoogleranking',                  # blog/hotel-google-ranking
-            'channel_manager_price_india',        # blog/channel-manager-price-india
-            'best_channel_manager_small_hotels',  # blog/best-channel-manager-small-hotels
-            'channel_manager_vs_pms',             # blog/channel-manager-vs-pms
+            'blogcmguide',                              # blog/channel-manager-guide
+            'blogdyprice',                              # blog/dynamic-pricing-strategy
+            'bloggoogleranking',                        # blog/hotel-google-ranking
+            'channel_manager_price_india',              # blog/channel-manager-price-india
+            'best_channel_manager_small_hotels',        # blog/best-channel-manager-small-hotels
+            'channel_manager_vs_pms',                   # blog/channel-manager-vs-pms
 
             # ---------- City pages ----------
             'hotel_software_ujjain',
@@ -58,9 +78,13 @@ class StaticViewSitemap(Sitemap):
         return reverse(item)
 
     def priority(self, item):
-        # Most important pages get higher priority
+        # Highest — homepage and main money pages
         if item in ('index', 'channelmanager', 'hotel_channel_manager'):
             return 1.0
-        if item in ('PMS', 'BookingEngine', 'price'):
+        # High — core product pages and pillar guides
+        if item in ('PMS', 'BookingEngine', 'price',
+                    'hotel_pms_software', 'hotel_booking_engine',
+                    'hotel_billing_software'):
             return 0.9
+        # Everything else
         return 0.8

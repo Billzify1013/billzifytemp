@@ -186,3 +186,54 @@ def hotel_software_nashik(request):
 
 def hotel_channel_manager(request):
     return render(request, 'hotel-channel-manager.html')
+
+def hotel_pms_software(request):
+    return render(request, 'hotel-pms-software.html')
+
+def hotel_booking_engine(request):
+    return render(request, 'hotel-booking-engine.html')
+
+def hotel_billing_software(request):
+    return render(request, 'hotel-billing-software.html')
+
+def list_hotel_on_makemytrip(request):
+    return render(request, 'list-hotel-on-makemytrip.html')
+
+def list_hotel_on_booking_com(request):
+    return render(request, 'list-hotel-on-booking-com.html')
+
+def list_hotel_on_airbnb(request):
+    return render(request, 'list-hotel-on-airbnb.html')
+
+
+
+# views.py
+def makemytrip_channel_manager(request):
+    return render(request, 'makemytrip-channel-manager.html')
+
+def booking_com_channel_manager(request):
+    return render(request, 'booking-com-channel-manager.html')
+
+def goibibo_channel_manager(request):
+    return render(request, 'goibibo-channel-manager.html')
+
+def agoda_channel_manager(request):
+    return render(request, 'agoda-channel-manager.html')
+
+def airbnb_channel_manager(request):
+    return render(request, 'airbnb-channel-manager.html')
+
+def homestay_management_software(request):
+    return render(request, 'homestay-management-software.html')
+
+def resort_management_software(request):
+    return render(request, 'resort-management-software.html')
+
+def guest_house_management_software(request):
+    return render(request, 'guest-house-management-software.html')
+
+def boutique_hotel_software(request):
+    return render(request, 'boutique-hotel-software.html')
+
+def service_apartment_management_software(request):
+    return render(request, 'service-apartment-management-software.html')

@@ -70,6 +70,25 @@ urlpatterns = [
     path('hotel-software-nashik/', views.hotel_software_nashik, name="hotel_software_nashik"),
 
     path('hotel-channel-manager/', views.hotel_channel_manager, name="hotel_channel_manager"),
+
+    path('hotel-pms-software/', views.hotel_pms_software, name="hotel_pms_software"),
+    path('hotel-booking-engine/', views.hotel_booking_engine, name="hotel_booking_engine"),
+    path('hotel-billing-software/', views.hotel_billing_software, name="hotel_billing_software"),
+    path('list-hotel-on-makemytrip/', views.list_hotel_on_makemytrip, name="list_hotel_on_makemytrip"),
+    path('list-hotel-on-booking-com/', views.list_hotel_on_booking_com, name="list_hotel_on_booking_com"),
+    path('list-hotel-on-airbnb/', views.list_hotel_on_airbnb, name="list_hotel_on_airbnb"),
+
+    # urls.py
+    path('makemytrip-channel-manager/', views.makemytrip_channel_manager, name="makemytrip_channel_manager"),
+    path('booking-com-channel-manager/', views.booking_com_channel_manager, name="booking_com_channel_manager"),
+    path('goibibo-channel-manager/', views.goibibo_channel_manager, name="goibibo_channel_manager"),
+    path('agoda-channel-manager/', views.agoda_channel_manager, name="agoda_channel_manager"),
+    path('airbnb-channel-manager/', views.airbnb_channel_manager, name="airbnb_channel_manager"),
+    path('homestay-management-software/', views.homestay_management_software, name="homestay_management_software"),
+    path('resort-management-software/', views.resort_management_software, name="resort_management_software"),
+    path('guest-house-management-software/', views.guest_house_management_software, name="guest_house_management_software"),
+    path('boutique-hotel-software/', views.boutique_hotel_software, name="boutique_hotel_software"),
+    path('service-apartment-management-software/', views.service_apartment_management_software, name="service_apartment_management_software"),
     
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
