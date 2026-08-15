@@ -91,6 +91,18 @@ urlpatterns = [
     path('service-apartment-management-software/', views.service_apartment_management_software, name="service_apartment_management_software"),
     
 
+    # urls.py
+    path('google-hotel-center-integration/', views.google_hotel_center_integration, name="google_hotel_center_integration"),
+    path('google-free-booking-links-hotels/', views.google_free_booking_links_hotels, name="google_free_booking_links_hotels"),
+    path('free-hotel-api-for-pms-companies/', views.free_hotel_api_for_pms_companies, name="free_hotel_api_for_pms_companies"),
+    path('hotel-tech-partner-program-agencies/', views.hotel_tech_partner_program_agencies, name="hotel_tech_partner_program_agencies"),
+    path('how-google-hotel-booking-works/', views.how_google_hotel_booking_works, name="how_google_hotel_booking_works"),
+    path('benefits-of-google-hotel-integration/', views.benefits_of_google_hotel_integration, name="benefits_of_google_hotel_integration"),
+    path('reduce-ota-commission-google-direct-bookings/', views.reduce_ota_commission_google_direct_bookings, name="reduce_ota_commission_google_direct_bookings"),
+    path('google-hotel-integration-partner-india/', views.google_hotel_integration_partner_india, name="google_hotel_integration_partner_india"),
+
+
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

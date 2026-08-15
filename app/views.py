@@ -237,3 +237,28 @@ def boutique_hotel_software(request):
 
 def service_apartment_management_software(request):
     return render(request, 'service-apartment-management-software.html')
+
+# views.py
+def google_hotel_center_integration(request):
+    return render(request, 'google-hotel-center-integration.html')
+
+def google_free_booking_links_hotels(request):
+    return render(request, 'google-free-booking-links-hotels.html')
+
+def free_hotel_api_for_pms_companies(request):
+    return render(request, 'free-hotel-api-for-pms-companies.html')
+
+def hotel_tech_partner_program_agencies(request):
+    return render(request, 'hotel-tech-partner-program-agencies.html')
+
+def how_google_hotel_booking_works(request):
+    return render(request, 'how-google-hotel-booking-works.html')
+
+def benefits_of_google_hotel_integration(request):
+    return render(request, 'benefits-of-google-hotel-integration.html')
+
+def reduce_ota_commission_google_direct_bookings(request):
+    return render(request, 'reduce-ota-commission-google-direct-bookings.html')
+
+def google_hotel_integration_partner_india(request):
+    return render(request, 'google-hotel-integration-partner-india.html')

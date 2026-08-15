@@ -26,6 +26,18 @@ class StaticViewSitemap(Sitemap):
             'list_hotel_on_booking_com',                # /list-hotel-on-booking-com/
             'list_hotel_on_airbnb',                     # /list-hotel-on-airbnb/
 
+            # ---------- Google integration ----------
+            'google_hotel_center_integration',
+            'google_free_booking_links_hotels',
+            'how_google_hotel_booking_works',
+            'benefits_of_google_hotel_integration',
+            'reduce_ota_commission_google_direct_bookings',
+            'google_hotel_integration_partner_india',
+
+            # ---------- Partner program ----------
+            'free_hotel_api_for_pms_companies',
+            'hotel_tech_partner_program_agencies',
+
             # ---------- OTA-specific pages ----------
             'makemytrip_channel_manager',
             'booking_com_channel_manager',
@@ -79,12 +91,17 @@ class StaticViewSitemap(Sitemap):
 
     def priority(self, item):
         # Highest — homepage and main money pages
-        if item in ('index', 'channelmanager', 'hotel_channel_manager'):
+        if item in ('index', 'channelmanager', 'hotel_channel_manager',
+                    'google_hotel_center_integration',
+                    'google_hotel_integration_partner_india'):
             return 1.0
-        # High — core product pages and pillar guides
+        # High — core product pages, pillar guides and partner pages
         if item in ('PMS', 'BookingEngine', 'price',
                     'hotel_pms_software', 'hotel_booking_engine',
-                    'hotel_billing_software'):
+                    'hotel_billing_software',
+                    'free_hotel_api_for_pms_companies',
+                    'hotel_tech_partner_program_agencies',
+                    'google_free_booking_links_hotels'):
             return 0.9
         # Everything else
         return 0.8
