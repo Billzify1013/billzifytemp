@@ -1,0 +1,524 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Dynamic Pricing Software India | Automatic Room Rate Management — Billzify</title>
+<meta name="description" content="Automatic room rate pricing for Indian hotels. Adjusts your rates by date based on your own bookings, festivals and demand — then pushes to MMT, Booking.com and Goibibo instantly. Built into Billzify PMS. See what it would have earned on your last 90 days.">
+<meta name="keywords" content="hotel dynamic pricing India, revenue management software hotels, automatic room rate, hotel pricing software, RMS for hotels India, channel manager rate update">
+<meta name="author" content="Billzify">
+<link rel="canonical" href="https://www.billzify.com/dynamic-pricing/">
+
+<meta property="og:title" content="Stop selling every night at the same rate">
+<meta property="og:description" content="Automatic room pricing built into your PMS. See what it would have earned you on your last 90 days — before you turn it on.">
+<meta property="og:url" content="https://www.billzify.com/dynamic-pricing/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.billzify.com/static/og/smart-pricing.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Billzify Smart Pricing",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Automatic room rate pricing for Indian hotels. Adjusts rates by date based on bookings, festivals and demand, then pushes to connected OTA channels.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Billzify Technology India",
+    "url": "https://billzify.com"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will it undercut my rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It cannot go below the floor you set, on any room type. You decide the lowest and highest price. It works only inside that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to let it change prices on its own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at all. Most hotels start in approval mode - you see the suggestion, you tap yes. Move to automatic only if and when you want to."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I have already fixed my Diwali rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lock that date. Smart Pricing skips it completely - no suggestion, no change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I trust the number it picks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tap any date and it explains itself in plain words: how full you are, how that compares to last year, which festival is near, how soon the date is. Every price has a reason you can read."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my current setup at risk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It runs alongside everything you use today, and stays off until you switch it on. Switch it back off and your rates stay exactly where they are."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long before I see something?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your first suggestions appear within a few hours of switching it on."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+/* ---- Smart Pricing page-specific styles ---- */
+.sp-cal-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.5rem}
+.sp-day{flex:1 1 90px;min-width:88px;border-radius:10px;padding:.85rem .5rem;text-align:center;background:#f3f4f6;border:1px solid #e5e7eb}
+.sp-day .sp-dow{font-size:.72rem;letter-spacing:.5px;text-transform:uppercase;color:#6b7280;margin-bottom:.25rem}
+.sp-day .sp-amt{font-size:1.05rem;font-weight:700;color:#374151}
+.sp-day.up{background:#e8f5ef;border-color:#c7e6d8}
+.sp-day.up .sp-amt{color:#0d7a52}
+.sp-day.up .sp-dow{color:#0d7a52}
+.sp-day.down{background:#fdf0e6;border-color:#f5d9be}
+.sp-day.down .sp-amt{color:#b54708}
+.sp-day.down .sp-dow{color:#b54708}
+.sp-label{font-size:.78rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#6b7280;margin-bottom:.7rem}
+.sp-caption{font-size:.92rem;color:#4b5563;margin-top:.6rem}
+.sp-step{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.4rem;height:100%}
+.sp-step .sp-ic{font-size:1.6rem;margin-bottom:.6rem;display:block}
+.sp-step h5{font-size:1rem;font-weight:700;color:#1f2937;margin-bottom:.35rem}
+.sp-step p{font-size:.9rem;color:#4b5563;margin:0}
+.sp-feature{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.4rem;height:100%}
+.sp-feature h5{font-size:1rem;font-weight:700;color:#1f2937;margin-bottom:.4rem}
+.sp-feature p{font-size:.92rem;color:#4b5563;margin:0}
+.sp-ota{background:#f2f9f6;border-left:3px solid #0d7a52;border-radius:12px;padding:2rem}
+.sp-ota-logos{display:flex;gap:2rem;flex-wrap:wrap;align-items:center;margin-top:1.5rem;opacity:.55}
+.sp-ota-logos img{height:34px;filter:grayscale(100%)}
+.sp-proof-point{display:flex;gap:.7rem;align-items:flex-start;margin-bottom:.7rem}
+.sp-proof-point .n{width:24px;height:24px;border-radius:50%;background:#0d7a52;color:#fff;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.sp-proof-point span{font-size:.95rem;color:#4b5563}
+.sp-faq{border-bottom:1px solid #e5e7eb;padding:1.1rem 0}
+.sp-faq-q{font-size:1rem;font-weight:700;color:#1f2937;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:0}
+.sp-faq-q .sp-plus{color:#0d7a52;font-size:1.3rem;flex-shrink:0;transition:transform .2s}
+.sp-faq-a{font-size:.95rem;color:#4b5563;line-height:1.7;margin-top:.7rem;display:none}
+.sp-faq.open .sp-faq-a{display:block}
+.sp-faq.open .sp-plus{transform:rotate(45deg)}
+.sp-final{background:#1f2937;border-radius:16px;padding:3.2rem 2rem;text-align:center}
+.sp-final h2{color:#fff;margin-bottom:.8rem}
+.sp-final p{color:rgba(255,255,255,.72);max-width:520px;margin:0 auto 1.8rem}
+.sp-final .sp-note{font-size:.85rem;color:rgba(255,255,255,.5);margin-top:1.2rem;margin-bottom:0}
+.sp-btn-light{background:#fff;color:#1f2937;border:none}
+.sp-btn-light:hover{background:#f3f4f6;color:#1f2937}
+.sp-btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.sp-btn-outline:hover{background:rgba(255,255,255,.1);color:#fff}
+.sp-trust{font-size:.88rem;color:#6b7280;margin-top:1rem}
+
+/* ---- hero mockup ---- */
+.sp-mock{background:#fff;border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;box-shadow:rgba(0,0,0,.08) 0 6px 24px;margin-top:1rem}
+.sp-mock-bar{background:#f9fafb;border-bottom:1px solid #e5e7eb;padding:.7rem 1rem;display:flex;align-items:center;gap:.4rem}
+.sp-mock-bar .d{width:9px;height:9px;border-radius:50%;background:#d1d5db}
+.sp-mock-title{margin-left:.8rem;font-size:.78rem;color:#6b7280;font-weight:600}
+.sp-mock-body{padding:1.1rem}
+.sp-mock-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.45rem}
+.sp-mc{border-radius:8px;padding:.55rem .2rem;text-align:center;background:#f3f4f6;border:1px solid #e5e7eb}
+.sp-mc span{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.4px;color:#9ca3af;margin-bottom:.15rem}
+.sp-mc b{font-size:.8rem;color:#374151}
+.sp-mc.up{background:#e8f5ef;border-color:#c7e6d8}
+.sp-mc.up b,.sp-mc.up span{color:#0d7a52}
+.sp-mc.down{background:#fdf0e6;border-color:#f5d9be}
+.sp-mc.down b,.sp-mc.down span{color:#b54708}
+.sp-mock-note{margin-top:1rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:.8rem 1rem}
+.sp-mock-note b{display:block;font-size:.88rem;color:#1f2937;margin-bottom:.15rem}
+.sp-mock-note span{font-size:.78rem;color:#6b7280}
+
+/* ---- channel pills ---- */
+.sp-chan{font-size:.85rem;font-weight:600;color:#6b7280;background:#fff;border:1px solid #e5e7eb;border-radius:50px;padding:.45rem 1.1rem}
+
+/* ---- what-if panel ---- */
+.sp-whatif{background:#fff;border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;box-shadow:rgba(0,0,0,.10) 0 6px 22px}
+.sp-wi-head{background:#f9fafb;border-bottom:1px solid #e5e7eb;padding:.75rem 1.2rem;font-size:.78rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#6b7280}
+.sp-wi-main{padding:1.6rem 1.2rem;text-align:center;border-bottom:1px solid #e5e7eb}
+.sp-wi-label{font-size:.8rem;color:#6b7280;margin-bottom:.4rem}
+.sp-wi-num{font-size:2.4rem;font-weight:700;color:#0d7a52;line-height:1;display:flex;align-items:center;justify-content:center;gap:.15rem}
+.sp-blur{filter:blur(7px);-webkit-user-select:none;user-select:none;opacity:.55;pointer-events:none}
+.sp-wi-sub{font-size:.78rem;color:#9ca3af;margin-top:.5rem}
+.sp-wi-list-label{padding:.9rem 1.2rem .4rem;font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#9ca3af}
+.sp-wi-row{display:flex;align-items:center;gap:.7rem;padding:.6rem 1.2rem;border-bottom:1px solid #f3f4f6;flex-wrap:wrap}
+.sp-wi-row .dt{font-size:.85rem;font-weight:600;color:#1f2937;min-width:92px}
+.sp-wi-row .ba{font-size:.82rem;color:#6b7280;flex:1}
+.sp-wi-row .pill{font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:50px}
+.sp-wi-row .pill.up{background:#e8f5ef;color:#0d7a52}
+.sp-wi-row .pill.down{background:#fdf0e6;color:#b54708}
+.sp-wi-foot{padding:.85rem 1.2rem;font-size:.78rem;color:#9ca3af;text-align:center;background:#f9fafb}
+@media(max-width:576px){.sp-mock-grid{gap:.25rem}.sp-mc{padding:.4rem .1rem}.sp-mc b{font-size:.68rem}.sp-wi-num{font-size:1.8rem}}
+@media(max-width:576px){.sp-day{min-width:0;flex:1 1 calc(25% - .5rem);padding:.6rem .3rem}.sp-day .sp-amt{font-size:.88rem}.sp-final{padding:2.2rem 1.2rem}}
+</style>
+
+
+<!-- ================= SECTION 1 — HERO ================= -->
+<div class="container-fluid bg-white mt-0 mb-5">
+    <div class="container">
+        <div class="row g-1 align-items-center" style="margin-top:95px">
+            <div class="col-lg-6 py-0 pb-0 pt-lg-0">
+                <h1 class="mt-0 mb-3" style="font-family:'Poppins', sans-serif;color:#1f2937;">
+                    Every night is different. Your rate shouldn't be the same.
+                </h1>
+                <p class="pe-3 me-3 mb-0" style="font-weight:500;color:#4b5563">
+                    Smart Pricing adjusts your room rates date by date — higher when demand is building,
+                    lower when a night is going empty. It's built into the Billzify you already use,
+                    so there's nothing new to learn.
+                </p>
+                <div class="mt-5">
+                    <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn btn-primary py-3 px-4 me-2 mb-2">See it on my own bookings</a>
+                    <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn btn-outline-primary py-3 px-4 mb-2">Talk to us</a>
+                </div>
+                <p class="sp-trust">Running inside 200+ hotels across India</p>
+            </div>
+            <div class="col-lg-6">
+                <!-- ============================================================ -->
+                <!-- HERO VISUAL — built in CSS so it works right away.          -->
+                <!-- WHEN YOU HAVE THE REAL SCREENSHOT (1200x750), replace this  -->
+                <!-- whole <div class="sp-mock"> block with:                     -->
+                <!-- <img class="img-fluid" src="{% static 'img/smart-pricing-calendar.png' %}" alt="Smart Pricing calendar"> -->
+                <!-- ============================================================ -->
+                <div class="sp-mock">
+                    <div class="sp-mock-bar">
+                        <span class="d"></span><span class="d"></span><span class="d"></span>
+                        <span class="sp-mock-title">Smart Pricing &middot; October</span>
+                    </div>
+                    <div class="sp-mock-body">
+                        <div class="sp-mock-grid">
+                            <div class="sp-mc"><span>Mon</span><b>2500</b></div>
+                            <div class="sp-mc down"><span>Tue</span><b>2200</b></div>
+                            <div class="sp-mc"><span>Wed</span><b>2450</b></div>
+                            <div class="sp-mc"><span>Thu</span><b>2550</b></div>
+                            <div class="sp-mc up"><span>Fri</span><b>2900</b></div>
+                            <div class="sp-mc up"><span>Sat</span><b>3200</b></div>
+                            <div class="sp-mc"><span>Sun</span><b>2500</b></div>
+                            <div class="sp-mc"><span>Mon</span><b>2500</b></div>
+                            <div class="sp-mc down"><span>Tue</span><b>2250</b></div>
+                            <div class="sp-mc"><span>Wed</span><b>2500</b></div>
+                            <div class="sp-mc up"><span>Thu</span><b>2750</b></div>
+                            <div class="sp-mc up"><span>Fri</span><b>3100</b></div>
+                            <div class="sp-mc up"><span>Sat</span><b>3400</b></div>
+                            <div class="sp-mc"><span>Sun</span><b>2600</b></div>
+                        </div>
+                        <div class="sp-mock-note">
+                            <b>Sat 18 Oct &middot; &#8377;3,200</b>
+                            <span>Filling faster than usual &middot; festival weekend nearby</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= SECTION 2 — THE IDEA ================= -->
+<div style="background:#EFEFF6">
+<div class="container-xxl py-6" style="background:#EFEFF6">
+    <div class="container">
+        <div class="row g-6">
+            <div class="col-lg-12">
+                <div class="d-flex align-items-center mb-5">
+                    <h3 class="lh-base mb-0">The same room. Two very different weeks.</h3>
+                </div>
+
+                <div class="mb-5">
+                    <div class="sp-label">How most hotels sell</div>
+                    <div class="sp-cal-row">
+                        <div class="sp-day"><div class="sp-dow">Mon</div><div class="sp-amt">2500</div></div>
+                        <div class="sp-day"><div class="sp-dow">Tue</div><div class="sp-amt">2500</div></div>
+                        <div class="sp-day"><div class="sp-dow">Wed</div><div class="sp-amt">2500</div></div>
+                        <div class="sp-day"><div class="sp-dow">Thu</div><div class="sp-amt">2500</div></div>
+                        <div class="sp-day"><div class="sp-dow">Fri</div><div class="sp-amt">2500</div></div>
+                        <div class="sp-day"><div class="sp-dow">Sat</div><div class="sp-amt">2500</div></div>
+                        <div class="sp-day"><div class="sp-dow">Sun</div><div class="sp-amt">2500</div></div>
+                    </div>
+                    <p class="sp-caption">
+                        Saturday sold out by noon — you could have asked for more.
+                        Tuesday stayed half empty — a lower rate might have filled it.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="sp-label">With Smart Pricing</div>
+                    <div class="sp-cal-row">
+                        <div class="sp-day"><div class="sp-dow">Mon</div><div class="sp-amt">2500</div></div>
+                        <div class="sp-day down"><div class="sp-dow">Tue</div><div class="sp-amt">2200</div></div>
+                        <div class="sp-day"><div class="sp-dow">Wed</div><div class="sp-amt">2450</div></div>
+                        <div class="sp-day"><div class="sp-dow">Thu</div><div class="sp-amt">2550</div></div>
+                        <div class="sp-day up"><div class="sp-dow">Fri</div><div class="sp-amt">2900</div></div>
+                        <div class="sp-day up"><div class="sp-dow">Sat</div><div class="sp-amt">3200</div></div>
+                        <div class="sp-day"><div class="sp-dow">Sun</div><div class="sp-amt">2500</div></div>
+                    </div>
+                    <p class="sp-caption">
+                        Green — demand is building. Orange — the night is going empty.
+                        Every number stays inside limits you set yourself.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- ================= SECTION 3 — FOUR STEPS ================= -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <h2>How it fits into your day</h2>
+        <div class="row g-4 mt-4">
+            <div class="col-lg-3 col-6">
+                <div class="sp-step">
+                    <span class="sp-ic">👁️</span>
+                    <h5>It watches</h5>
+                    <p>Your bookings, day by day</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="sp-step">
+                    <span class="sp-ic">💡</span>
+                    <h5>It suggests</h5>
+                    <p>A rate for each date, with the reason in plain words</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="sp-step">
+                    <span class="sp-ic">✅</span>
+                    <h5>You decide</h5>
+                    <p>Approve it, change it, or ignore it</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="sp-step">
+                    <span class="sp-ic">🚀</span>
+                    <h5>It goes live</h5>
+                    <p>Straight to MMT, Booking.com, Goibibo and the rest</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= SECTION 4 — WHAT YOU GET ================= -->
+<div style="background:#EFEFF6">
+<div class="container-xxl py-6" style="background:#EFEFF6">
+    <div class="container">
+        <div class="d-flex align-items-center mb-5">
+            <h3 class="lh-base mb-0">What it does for you</h3>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="sp-feature">
+                    <h5>Rates that move with demand</h5>
+                    <p>Busy dates earn more. Quiet dates get a nudge so they don't sit empty.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="sp-feature">
+                    <h5>Your limits, always</h5>
+                    <p>You set the lowest and highest price for each room type. Nothing goes outside that — ever.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="sp-feature">
+                    <h5>Every price explained</h5>
+                    <p>Tap any date and it tells you why, in plain words. No black box.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="sp-feature">
+                    <h5>Festivals already loaded</h5>
+                    <p>Diwali, Holi, long weekends — all in there and kept updated. Add your own too: a wedding nearby, a local fair.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="sp-feature">
+                    <h5>Protected dates</h5>
+                    <p>Already decided your Diwali rate? Lock that date. It gets skipped completely.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="sp-feature">
+                    <h5>Live on your channels instantly</h5>
+                    <p>No sync delay — pricing, PMS and channel manager are the same system.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- ================= SECTION 5 — OTA ================= -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="sp-ota">
+            <h3 class="lh-base mb-3">Why staying current matters on the OTAs</h3>
+            <p style="font-size:1.15rem;font-weight:600;color:#1f2937;">
+                A listing that converts tends to rank better.
+            </p>
+            <p style="font-weight:500;color:#4b5563;margin-bottom:0;">
+                Booking.com and Expedia both say their search ranking responds to how guests actually
+                behave — a listing that gets clicked and booked moves up. A rate that's competitive
+                <em>on the day</em> converts better than one that hasn't moved in three months.
+                Smart Pricing keeps your rates current on every channel, every day, without you
+                having to remember.
+            </p>
+
+            <!-- ============================================================ -->
+            <!-- CHANNEL ROW — text pills, no image files needed.            -->
+            <!-- WHEN YOU HAVE GREYSCALE LOGOS (120x40), replace each span   -->
+            <!-- with: <img src="{% static 'img/ota/mmt.png' %}" alt="MakeMyTrip"> -->
+            <!-- IMPORTANT: keep only the channels you're actually connected to. -->
+            <!-- ============================================================ -->
+            <div class="sp-ota-logos">
+                <span class="sp-chan">MakeMyTrip</span>
+                <span class="sp-chan">Booking.com</span>
+                <span class="sp-chan">Goibibo</span>
+                <span class="sp-chan">Agoda</span>
+                <span class="sp-chan">Google</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= SECTION 6 — PROOF ================= -->
+<div style="background:#EFEFF6">
+<div class="container-xxl py-6" style="background:#EFEFF6">
+    <div class="container">
+        <div class="row g-6 align-items-center">
+            <div class="col-lg-5">
+                <div class="d-flex align-items-center mb-4">
+                    <h3 class="lh-base mb-0">Don't take our word for it. Look at your own.</h3>
+                </div>
+                <p style="font-weight:500;color:#4b5563">
+                    Open Smart Pricing and it replays your last 30, 60 or 90 days of real bookings —
+                    showing exactly what it would have charged on each date, and what that means in
+                    rupees. Nothing changes. You just look.
+                </p>
+
+                <div class="mt-4 mb-4">
+                    <div class="sp-proof-point"><span class="n">1</span><span>Your own data, not a demo</span></div>
+                    <div class="sp-proof-point"><span class="n">2</span><span>Takes about ten seconds to load</span></div>
+                    <div class="sp-proof-point"><span class="n">3</span><span>Shows the biggest differences, date by date</span></div>
+                    <div class="sp-proof-point"><span class="n">4</span><span>If it doesn't convince you, leave it switched off</span></div>
+                </div>
+
+                <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn btn-primary py-3 px-5 mt-2">See my last 90 days</a>
+            </div>
+            <div class="col-lg-7">
+                <!-- ============================================================ -->
+                <!-- WHAT-IF VISUAL — built in CSS so the page works now.        -->
+                <!-- THIS IS THE MOST IMPORTANT IMAGE ON THE PAGE. As soon as    -->
+                <!-- you have a real screenshot (1000x700, hotel name blurred),   -->
+                <!-- replace this whole <div class="sp-whatif"> block with:      -->
+                <!-- <img class="img-fluid" src="{% static 'img/smart-pricing-whatif.png' %}" alt="Your last 90 days"> -->
+                <!-- ============================================================ -->
+                <div class="sp-whatif">
+                    <div class="sp-wi-head">Your last 90 days &middot; replayed</div>
+                    <div class="sp-wi-main">
+                        <div class="sp-wi-label">Difference across the period</div>
+                        <div class="sp-wi-num">&#8377;<span class="sp-blur">1,84,500</span></div>
+                        <div class="sp-wi-sub">&#128274; Your figure appears when you open it on your own bookings</div>
+                    </div>
+                    <div class="sp-wi-list-label">Biggest differences</div>
+                    <div class="sp-wi-row"><span class="dt">Sat 12 Oct</span><span class="ba">Sold out by 11am</span><span class="pill up">Under-priced</span></div>
+                    <div class="sp-wi-row"><span class="dt">Tue 15 Oct</span><span class="ba">Finished 40% full</span><span class="pill down">Over-priced</span></div>
+                    <div class="sp-wi-row"><span class="dt">Fri 25 Oct</span><span class="ba">Festival weekend</span><span class="pill up">Under-priced</span></div>
+                    <div class="sp-wi-row"><span class="dt">Wed 06 Nov</span><span class="ba">Finished 55% full</span><span class="pill down">Over-priced</span></div>
+                    <div class="sp-wi-foot">Open Smart Pricing to see your real numbers</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- ================= SECTION 7 — OBJECTIONS ================= -->
+<div class="container-xxl py-5" id="faq">
+    <div class="container">
+        <h2>Fair questions</h2>
+        <div class="row mt-5">
+            <div class="col-lg-8">
+
+                <div class="sp-faq" onclick="spToggle(this)">
+                    <h5 class="sp-faq-q">Will it undercut my rates? <span class="sp-plus">+</span></h5>
+                    <div class="sp-faq-a">It cannot go below the floor you set, on any room type. You decide the lowest and highest price. It works only inside that.</div>
+                </div>
+
+                <div class="sp-faq" onclick="spToggle(this)">
+                    <h5 class="sp-faq-q">Do I have to let it change prices on its own? <span class="sp-plus">+</span></h5>
+                    <div class="sp-faq-a">Not at all. Most hotels start in approval mode — you see the suggestion, you tap yes. Move to automatic only if and when you want to.</div>
+                </div>
+
+                <div class="sp-faq" onclick="spToggle(this)">
+                    <h5 class="sp-faq-q">What if I've already fixed my Diwali rate? <span class="sp-plus">+</span></h5>
+                    <div class="sp-faq-a">Lock that date. Smart Pricing skips it completely — no suggestion, no change.</div>
+                </div>
+
+                <div class="sp-faq" onclick="spToggle(this)">
+                    <h5 class="sp-faq-q">Why should I trust the number it picks? <span class="sp-plus">+</span></h5>
+                    <div class="sp-faq-a">Tap any date and it explains itself in plain words: how full you are, how that compares to last year, which festival is near, how soon the date is. Every price has a reason you can read.</div>
+                </div>
+
+                <div class="sp-faq" onclick="spToggle(this)">
+                    <h5 class="sp-faq-q">Is my current setup at risk? <span class="sp-plus">+</span></h5>
+                    <div class="sp-faq-a">No. It runs alongside everything you use today, and stays off until you switch it on. Switch it back off and your rates stay exactly where they are.</div>
+                </div>
+
+                <div class="sp-faq" onclick="spToggle(this)">
+                    <h5 class="sp-faq-q">How long before I see something? <span class="sp-plus">+</span></h5>
+                    <div class="sp-faq-a">Your first suggestions appear within a few hours of switching it on.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= SECTION 8 — FINAL CTA ================= -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="sp-final">
+            <h2>Look at your last 90 days. It costs nothing.</h2>
+            <p>Log in to Billzify and open Smart Pricing. Take a look, then decide.</p>
+            <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn sp-btn-light py-3 px-5 me-2 mb-2">Open Smart Pricing</a>
+            <a href="https://wa.me/message/BWCMUEL3U54RF1" class="btn sp-btn-outline py-3 px-5 mb-2">Book a 15-minute walkthrough</a>
+            <p class="sp-note">Optional add-on. Switch it off any time from your own dashboard.</p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+function spToggle(el){ el.classList.toggle('open'); }
+</script>
+
+{% endblock %}

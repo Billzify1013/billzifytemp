@@ -262,3 +262,50 @@ def reduce_ota_commission_google_direct_bookings(request):
 
 def google_hotel_integration_partner_india(request):
     return render(request, 'google-hotel-integration-partner-india.html')
+
+def dynamic_pricing(request):
+    return render(request, 'dynamic-pricing.html')
+
+# ---------- DYNAMIC PRICING ----------
+
+def hotel_dynamic_pricing_india(request):
+    return render(request, 'hotel-dynamic-pricing-india.html')
+
+def seasonal_pricing_for_hotels(request):
+    return render(request, 'seasonal-pricing-for-hotels.html')
+
+def weekend_vs_weekday_hotel_pricing(request):
+    return render(request, 'weekend-vs-weekday-hotel-pricing.html')
+
+def festival_pricing_indian_hotels(request):
+    return render(request, 'festival-pricing-indian-hotels.html')
+
+def how_to_price_hotel_rooms(request):
+    return render(request, 'how-to-price-hotel-rooms.html')
+
+def empty_hotel_rooms_pricing(request):
+    return render(request, 'empty-hotel-rooms-pricing.html')
+
+def hotel_occupancy_and_rates(request):
+    return render(request, 'hotel-occupancy-and-rates.html')
+
+def dynamic_pricing_hotels_ujjain(request):
+    return render(request, 'dynamic-pricing-hotels-ujjain.html')
+
+def dynamic_pricing_hotels_goa(request):
+    return render(request, 'dynamic-pricing-hotels-goa.html')
+
+def dynamic_pricing_hotels_jaipur(request):
+    return render(request, 'dynamic-pricing-hotels-jaipur.html')
+
+def dynamic_pricing_hotels_varanasi(request):
+    return render(request, 'dynamic-pricing-hotels-varanasi.html')
+
+def dynamic_pricing_hotels_shirdi(request):
+    return render(request, 'dynamic-pricing-hotels-shirdi.html')
+
+def dynamic_pricing_hotels_tirupati(request):
+    return render(request, 'dynamic-pricing-hotels-tirupati.html')
+
+def dynamic_pricing_hotels_udaipur(request):
+    return render(request, 'dynamic-pricing-hotels-udaipur.html')

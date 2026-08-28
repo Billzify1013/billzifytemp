@@ -102,6 +102,23 @@ urlpatterns = [
     path('google-hotel-integration-partner-india/', views.google_hotel_integration_partner_india, name="google_hotel_integration_partner_india"),
 
 
+    path('dynamic-pricing/', views.dynamic_pricing, name="dynamic_pricing"),
+    # ---------- Dynamic Pricing ----------
+    path('hotel-dynamic-pricing-india/', views.hotel_dynamic_pricing_india, name="hotel_dynamic_pricing_india"),
+    path('seasonal-pricing-for-hotels/', views.seasonal_pricing_for_hotels, name="seasonal_pricing_for_hotels"),
+    path('weekend-vs-weekday-hotel-pricing/', views.weekend_vs_weekday_hotel_pricing, name="weekend_vs_weekday_hotel_pricing"),
+    path('festival-pricing-indian-hotels/', views.festival_pricing_indian_hotels, name="festival_pricing_indian_hotels"),
+    path('how-to-price-hotel-rooms/', views.how_to_price_hotel_rooms, name="how_to_price_hotel_rooms"),
+    path('empty-hotel-rooms-pricing/', views.empty_hotel_rooms_pricing, name="empty_hotel_rooms_pricing"),
+    path('hotel-occupancy-and-rates/', views.hotel_occupancy_and_rates, name="hotel_occupancy_and_rates"),
+    path('dynamic-pricing-hotels-ujjain/', views.dynamic_pricing_hotels_ujjain, name="dynamic_pricing_hotels_ujjain"),
+    path('dynamic-pricing-hotels-goa/', views.dynamic_pricing_hotels_goa, name="dynamic_pricing_hotels_goa"),
+    path('dynamic-pricing-hotels-jaipur/', views.dynamic_pricing_hotels_jaipur, name="dynamic_pricing_hotels_jaipur"),
+    path('dynamic-pricing-hotels-varanasi/', views.dynamic_pricing_hotels_varanasi, name="dynamic_pricing_hotels_varanasi"),
+    path('dynamic-pricing-hotels-shirdi/', views.dynamic_pricing_hotels_shirdi, name="dynamic_pricing_hotels_shirdi"),
+    path('dynamic-pricing-hotels-tirupati/', views.dynamic_pricing_hotels_tirupati, name="dynamic_pricing_hotels_tirupati"),
+    path('dynamic-pricing-hotels-udaipur/', views.dynamic_pricing_hotels_udaipur, name="dynamic_pricing_hotels_udaipur"),
+
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
