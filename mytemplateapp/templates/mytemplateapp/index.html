@@ -165,7 +165,7 @@
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="https://www.billzify.com/static/img/illfy.png" alt="">Billzify Review AI</a>
+    <a class="brand" href="/app/reviewsai/"><img src="https://www.billzify.com/static/img/illfy.png" alt="">Billzify Review AI</a>
     <nav class="nav" aria-label="Main">
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
@@ -237,7 +237,8 @@
           <h3>AI reply assistant</h3>
           <p>Each review gets a reply drafted for it — thanking happy customers by name and answering complaints calmly with what you'll do about it.</p>
           <ul>
-            <li>Nothing is posted until you approve it</li>
+            <li>Nothing is posted until you approve it, unless you turn on auto-reply</li>
+            <li>Optional auto-reply for 4–5 star reviews; low ratings still come to you first</li>
             <li>Edit any draft before posting</li>
             <li>Set your tone once: formal, friendly or short</li>
             <li>Replies in English or Hindi</li>
@@ -249,8 +250,8 @@
           <p>Your Google review link goes out with every bill, so more of your real customers leave a review.</p>
         </div>
         <div class="fbox">
-          <h3>Alerts and reports</h3>
-          <p>Get a WhatsApp alert for 1–2 star reviews, and see your rating trend, reply rate and common complaints each month.</p>
+          <h3>Growth and reports</h3>
+          <p>See how many people found you on Google Search and Maps, how many called, visited your website or asked for directions, and your rating and reply rate month by month.</p>
         </div>
       </div>
     </div>
@@ -260,23 +261,26 @@
     <div class="wrap">
       <div class="head">
         <h2 id="google-title">How the Google Business Profile connection works</h2>
-        <p>You connect your own Business Profile by signing in with Google. You stay the owner; Billzify only acts on what you approve.</p>
+        <p>You connect your own Business Profile by signing in with Google. You stay the owner; Billzify only posts replies you approve, or the ones you have chosen to auto-reply.</p>
       </div>
       <div class="cols">
         <div class="tcol">
           <h3>What we read</h3>
           <ul>
+            <li>Your Google account email, to show which account is connected</li>
             <li>The business locations you choose to connect</li>
-            <li>Reviews on those locations</li>
-            <li>Replies already posted to those reviews</li>
+            <li>Reviews and replies on those locations</li>
+            <li>Google's performance numbers: views, calls, website clicks, directions</li>
+            <li>Monthly search words people used to find you</li>
           </ul>
         </div>
         <div class="tcol">
           <h3>What we do</h3>
           <ul>
-            <li>Show your reviews in your Billzify dashboard</li>
+            <li>Show your reviews and growth numbers in your Billzify dashboard</li>
             <li>Draft replies for you to check</li>
-            <li>Post a reply only when you tap approve</li>
+            <li>Post, edit or remove a reply when you tap the button, or automatically if you have turned on auto-reply</li>
+            <li>Tell you when Google removes a review you reported</li>
           </ul>
         </div>
         <div class="tcol no">
@@ -306,7 +310,7 @@
           <p>For a single business location.</p>
           <ul>
             <li>All Google reviews in one dashboard</li>
-            <li>AI-drafted replies, posted on your approval</li>
+            <li>AI-drafted replies, posted on your approval or by auto-reply</li>
             <li>Review link with every Billzify bill</li>
             <li>WhatsApp alert for low ratings</li>
             <li>Monthly rating report</li>
@@ -339,7 +343,7 @@
         </details>
         <details>
           <summary>Will replies be posted without my permission?</summary>
-          <p>No. Every reply is a draft until you or your authorised staff approve it. You can edit or discard any draft.</p>
+          <p>No. By default every reply is a draft until you or your authorised staff approve it, and you can edit or discard any draft. If you want, you can turn on auto-reply in settings — for all reviews or only for 4–5 star reviews — and those replies are posted automatically. You can turn it off any time.</p>
         </details>
         <details>
           <summary>What do I need to connect Google?</summary>
@@ -355,7 +359,7 @@
         </details>
         <details>
           <summary>Is my data safe?</summary>
-          <p>Google access tokens are stored encrypted and used only for your account. We don't sell or share your data. See our <a href="privacy.html">Privacy Policy</a>.</p>
+          <p>Google access tokens are stored encrypted and used only for your account. We don't sell or share your data. See our <a href="{% url 'policy'%}">Privacy Policy</a>.</p>
         </details>
       </div>
     </div>
@@ -374,7 +378,7 @@
         <ul>
           <li><a href="https://www.billzify.com/">Billzify home</a></li>
           <li><a href="#google">Google integration</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="{% url 'policy'%}">Privacy Policy</a></li>
         </ul>
       </div>
       <div>
